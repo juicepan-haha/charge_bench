@@ -1,0 +1,224 @@
+{
+  "batch_id": "batch--92aee67ffe",
+  "schema_version": "1.0",
+  "created_at": "2026-10-09T01:38:47.126904",
+  "scenario_ids": [
+    "campus_baseline_v1"
+  ],
+  "algorithms": [
+    "EDF",
+    "FCFS",
+    "LLF"
+  ],
+  "seeds": [
+    42,
+    43
+  ],
+  "runs": [
+    {
+      "run_id": "campus_baseline_v1--FCFS--595d77fc17",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "a0515d5c3e5c88fd5a39bece78d225944c4cce47",
+      "algorithm": "FCFS",
+      "algorithm_params": {},
+      "seed": 42,
+      "metrics": {
+        "demand_satisfaction_rate": 0.9032813056387269,
+        "energy_delivered_kwh": 496.9552931283534,
+        "energy_requested_kwh": 550.1666978228307,
+        "session_completion_rate": 0.5636363636363636,
+        "mean_delivery_ratio": 0.8863356203819439,
+        "worst_delivery_ratio": 0.053365570458096666,
+        "energy_cost_cny": 467.86687405669693,
+        "peak_power_kw": 59.99994695513855,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 55,
+        "sessions_dropped": 5,
+        "runtime_s": 0.11253107199991064
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:40.625282"
+      }
+    },
+    {
+      "run_id": "campus_baseline_v1--FCFS--847c5324f7",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "6110858992440c0a45275f26bbab070bdba604bc",
+      "algorithm": "FCFS",
+      "algorithm_params": {},
+      "seed": 43,
+      "metrics": {
+        "demand_satisfaction_rate": 0.9196038648689449,
+        "energy_delivered_kwh": 522.2064515283197,
+        "energy_requested_kwh": 567.8602183808141,
+        "session_completion_rate": 0.6166666666666667,
+        "mean_delivery_ratio": 0.9080964743654789,
+        "worst_delivery_ratio": 0.47789380227814976,
+        "energy_cost_cny": 485.54276642743577,
+        "peak_power_kw": 59.999977454609095,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 60,
+        "sessions_dropped": 0,
+        "runtime_s": 0.10650128999986919
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:46.898432"
+      }
+    },
+    {
+      "run_id": "campus_baseline_v1--EDF--5570508019",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "a0515d5c3e5c88fd5a39bece78d225944c4cce47",
+      "algorithm": "EDF",
+      "algorithm_params": {},
+      "seed": 42,
+      "metrics": {
+        "demand_satisfaction_rate": 0.902679969923821,
+        "energy_delivered_kwh": 496.62445824380075,
+        "energy_requested_kwh": 550.1666978228307,
+        "session_completion_rate": 0.6909090909090909,
+        "mean_delivery_ratio": 0.9224244085054475,
+        "worst_delivery_ratio": 0.5119337777831112,
+        "energy_cost_cny": 467.635359284147,
+        "peak_power_kw": 59.999972941675814,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 55,
+        "sessions_dropped": 5,
+        "runtime_s": 0.1042458580004677
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:40.854155"
+      }
+    },
+    {
+      "run_id": "campus_baseline_v1--EDF--bba8eac936",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "6110858992440c0a45275f26bbab070bdba604bc",
+      "algorithm": "EDF",
+      "algorithm_params": {},
+      "seed": 43,
+      "metrics": {
+        "demand_satisfaction_rate": 0.9176629517946263,
+        "energy_delivered_kwh": 521.104284206079,
+        "energy_requested_kwh": 567.8602183808141,
+        "session_completion_rate": 0.65,
+        "mean_delivery_ratio": 0.9318205823333401,
+        "worst_delivery_ratio": 0.5657410997242129,
+        "energy_cost_cny": 484.7712281076517,
+        "peak_power_kw": 59.99997745460911,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 60,
+        "sessions_dropped": 0,
+        "runtime_s": 0.10306757299986202
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:47.004585"
+      }
+    },
+    {
+      "run_id": "campus_baseline_v1--LLF--ff52a416cf",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "a0515d5c3e5c88fd5a39bece78d225944c4cce47",
+      "algorithm": "LLF",
+      "algorithm_params": {},
+      "seed": 42,
+      "metrics": {
+        "demand_satisfaction_rate": 0.913346308282548,
+        "energy_delivered_kwh": 502.4927223964825,
+        "energy_requested_kwh": 550.1666978228307,
+        "session_completion_rate": 0.23636363636363636,
+        "mean_delivery_ratio": 0.9112137785327281,
+        "worst_delivery_ratio": 0.647920907408478,
+        "energy_cost_cny": 471.7429573233988,
+        "peak_power_kw": 59.99961028432718,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 55,
+        "sessions_dropped": 5,
+        "runtime_s": 0.14838847299961344
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:41.126829"
+      }
+    },
+    {
+      "run_id": "campus_baseline_v1--LLF--3464dba4ed",
+      "scenario_id": "campus_baseline_v1",
+      "scenario_hash": "6110858992440c0a45275f26bbab070bdba604bc",
+      "algorithm": "LLF",
+      "algorithm_params": {},
+      "seed": 43,
+      "metrics": {
+        "demand_satisfaction_rate": 0.9200360976911227,
+        "energy_delivered_kwh": 522.4518993531129,
+        "energy_requested_kwh": 567.8602183808141,
+        "session_completion_rate": 0.45,
+        "mean_delivery_ratio": 0.9200159711196225,
+        "worst_delivery_ratio": 0.6557284684322903,
+        "energy_cost_cny": 485.71448691340925,
+        "peak_power_kw": 59.9999774546091,
+        "constraint_violations": 0,
+        "max_violation_a": 0.0,
+        "sessions_generated": 60,
+        "sessions_scheduled": 60,
+        "sessions_dropped": 0,
+        "runtime_s": 0.11906055700001161
+      },
+      "traceability": {
+        "schema_version": "1.0",
+        "acnportal_version": "0.3.3",
+        "python_version": "3.14.4",
+        "numpy_version": "2.5.3",
+        "pandas_version": "3.0.6",
+        "benchmark_date": "2026-01-05",
+        "simulation_start": "2026-01-05T08:00:00",
+        "executed_at": "2026-10-09T01:38:47.126633"
+      }
+    }
+  ],
+  "truncated": false
+}

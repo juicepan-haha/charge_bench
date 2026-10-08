@@ -1,0 +1,25 @@
+{
+  "scenario_id": "campus_baseline_v1",
+  "n_ports": 20,
+  "port_max_power_kw": 7.0,
+  "voltage_v": 220.0,
+  "network_limit_kw": 60.0,
+  "time_step_min": 5.0,
+  "start_hour": 8.0,
+  "window_hours": 10.0,
+  "n_sessions": 60,
+  "load_intensity": 1.0,
+  "deadline_tightness": 0.65,
+  "energy_cv": 0.3,
+  "arrival_mode": "uniform",
+  "price_profile": {
+    "kind": "tou",
+    "currency": "CNY",
+    "flat_cny_per_kwh": 0.7,
+    "valley_cny_per_kwh": 0.3,
+    "peak_cny_per_kwh": 1.1,
+    "valley_hours": [[0.0, 8.0]],
+    "peak_hours": [[10.0, 15.0], [18.0, 21.0]]
+  },
+  "seed": 42
+}

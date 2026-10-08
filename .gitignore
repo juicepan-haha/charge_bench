@@ -1,0 +1,13 @@
+# 虚拟环境与缓存
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# 实验产出（可由场景配置重建，不入库；examples/ 是可分享的样例，保留）
+results/
+experiments/
+*.db
+*.sqlite3
+scratch/_*

@@ -1,0 +1,497 @@
+{
+  "report_id": "agent--af069887aa",
+  "schema_version": "1.0",
+  "created_at": "2026-10-09T01:39:07.168251",
+  "primary_metric": "session_completion_rate",
+  "primary_direction": "max",
+  "budget": {
+    "max_rounds": 3,
+    "max_simulations": 200,
+    "max_seconds": 180.0,
+    "patience": 2,
+    "min_improvement": 0.01
+  },
+  "stop_reason": "max_rounds",
+  "rounds": [
+    {
+      "round_index": 0,
+      "outcomes": [
+        {
+          "spec": {
+            "name": "laxity-CF",
+            "primary": "laxity",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": null,
+            "rationale": "启发式搜索：主键 laxity，并优先排出能在剩余时间内充满的车辆。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--laxity-CF--887aa5946c",
+            "campus_baseline_v1--laxity-CF--d5e6caa823",
+            "campus_train_tight--laxity-CF--575bcd81af",
+            "campus_train_tight--laxity-CF--4e3bc16d80",
+            "campus_train_loose--laxity-CF--d7baba7aa6",
+            "campus_train_loose--laxity-CF--e6a9821b8d"
+          ],
+          "session_completion_rate": 0.8919191919191919,
+          "demand_satisfaction_rate": 0.9425029333579465,
+          "energy_cost_cny": 450.79384574134605,
+          "peak_power_kw": 59.99993377878838,
+          "constraint_violations": 0,
+          "spread": 0.0717171717171717,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "estimated_departure-CF",
+            "primary": "estimated_departure",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": null,
+            "rationale": "启发式搜索：主键 estimated_departure，并优先排出能在剩余时间内充满的车辆。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--estimated_departure-CF--1ac76240e2",
+            "campus_baseline_v1--estimated_departure-CF--e2e6ec4704",
+            "campus_train_tight--estimated_departure-CF--d71d1ebb4f",
+            "campus_train_tight--estimated_departure-CF--02d8e2c372",
+            "campus_train_loose--estimated_departure-CF--c42b5c2890",
+            "campus_train_loose--estimated_departure-CF--5905880877"
+          ],
+          "session_completion_rate": 0.9176767676767676,
+          "demand_satisfaction_rate": 0.9270386731727523,
+          "energy_cost_cny": 444.31972632227763,
+          "peak_power_kw": 59.99990452171096,
+          "constraint_violations": 0,
+          "spread": 0.05353535353535351,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "laxity-CF+estimated_departure",
+            "primary": "laxity",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": "estimated_departure",
+            "rationale": "启发式搜索：主键 laxity，并优先排出能在剩余时间内充满的车辆，次级键 estimated_departure。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--laxity-CF+estimated_departure--cfaa87eb84",
+            "campus_baseline_v1--laxity-CF+estimated_departure--999eb49a38",
+            "campus_train_tight--laxity-CF+estimated_departure--5db1bc67c7",
+            "campus_train_tight--laxity-CF+estimated_departure--ff50758046",
+            "campus_train_loose--laxity-CF+estimated_departure--c4bc11eccc",
+            "campus_train_loose--laxity-CF+estimated_departure--68768704a3"
+          ],
+          "session_completion_rate": 0.8919191919191919,
+          "demand_satisfaction_rate": 0.9425029333579465,
+          "energy_cost_cny": 450.79384574134605,
+          "peak_power_kw": 59.99993377878838,
+          "constraint_violations": 0,
+          "spread": 0.0717171717171717,
+          "n_simulations": 6
+        }
+      ],
+      "best_so_far": "estimated_departure-CF",
+      "best_value": 0.9176767676767676,
+      "improved": true,
+      "simulations_used": 33
+    },
+    {
+      "round_index": 1,
+      "outcomes": [
+        {
+          "spec": {
+            "name": "arrival-CF",
+            "primary": "arrival",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": null,
+            "rationale": "启发式搜索：主键 arrival，并优先排出能在剩余时间内充满的车辆。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--arrival-CF--6470cb088f",
+            "campus_baseline_v1--arrival-CF--a6c8379835",
+            "campus_train_tight--arrival-CF--fbf912acdf",
+            "campus_train_tight--arrival-CF--17781c2f38",
+            "campus_train_loose--arrival-CF--954b992250",
+            "campus_train_loose--arrival-CF--17224fb5b9"
+          ],
+          "session_completion_rate": 0.8974747474747474,
+          "demand_satisfaction_rate": 0.9270333625864556,
+          "energy_cost_cny": 444.42313678032133,
+          "peak_power_kw": 59.99995831478415,
+          "constraint_violations": 0,
+          "spread": 0.06060606060606059,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "remaining_demand-CF",
+            "primary": "remaining_demand",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": null,
+            "rationale": "启发式搜索：主键 remaining_demand，并优先排出能在剩余时间内充满的车辆。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--remaining_demand-CF--f4fa550694",
+            "campus_baseline_v1--remaining_demand-CF--1355c9b35a",
+            "campus_train_tight--remaining_demand-CF--9b8250dd8e",
+            "campus_train_tight--remaining_demand-CF--df76c8a58f",
+            "campus_train_loose--remaining_demand-CF--4be9427739",
+            "campus_train_loose--remaining_demand-CF--ad16c2fc25"
+          ],
+          "session_completion_rate": 0.8971099887766555,
+          "demand_satisfaction_rate": 0.916380216152186,
+          "energy_cost_cny": 439.5148341608705,
+          "peak_power_kw": 59.99993259416372,
+          "constraint_violations": 0,
+          "spread": 0.061335578002244685,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "estimated_departure-CF+laxity",
+            "primary": "estimated_departure",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": "laxity",
+            "rationale": "启发式搜索：主键 estimated_departure，并优先排出能在剩余时间内充满的车辆，次级键 laxity。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--estimated_departure-CF+laxity--887a26bea1",
+            "campus_baseline_v1--estimated_departure-CF+laxity--13f6799411",
+            "campus_train_tight--estimated_departure-CF+laxity--88a4f8f296",
+            "campus_train_tight--estimated_departure-CF+laxity--4af26281f9",
+            "campus_train_loose--estimated_departure-CF+laxity--4c68740c78",
+            "campus_train_loose--estimated_departure-CF+laxity--21a776bbbb"
+          ],
+          "session_completion_rate": 0.9204545454545454,
+          "demand_satisfaction_rate": 0.9293328508814707,
+          "energy_cost_cny": 445.2534050209061,
+          "peak_power_kw": 59.999877342892425,
+          "constraint_violations": 0,
+          "spread": 0.047979797979797977,
+          "n_simulations": 6
+        }
+      ],
+      "best_so_far": "estimated_departure-CF+laxity",
+      "best_value": 0.9204545454545454,
+      "improved": false,
+      "simulations_used": 51
+    },
+    {
+      "round_index": 2,
+      "outcomes": [
+        {
+          "spec": {
+            "name": "laxity-CF+arrival",
+            "primary": "laxity",
+            "direction": "asc",
+            "completion_first": true,
+            "tiebreak": "arrival",
+            "rationale": "启发式搜索：主键 laxity，并优先排出能在剩余时间内充满的车辆，次级键 arrival。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--laxity-CF+arrival--50bd77e6f0",
+            "campus_baseline_v1--laxity-CF+arrival--84447b2e4b",
+            "campus_train_tight--laxity-CF+arrival--10223fcb38",
+            "campus_train_tight--laxity-CF+arrival--29989bd11c",
+            "campus_train_loose--laxity-CF+arrival--d4cec4cd68",
+            "campus_train_loose--laxity-CF+arrival--0cf3cbbbef"
+          ],
+          "session_completion_rate": 0.8919191919191919,
+          "demand_satisfaction_rate": 0.9425029333579465,
+          "energy_cost_cny": 450.79384574134605,
+          "peak_power_kw": 59.99993377878838,
+          "constraint_violations": 0,
+          "spread": 0.0717171717171717,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "delivery_ratio-P",
+            "primary": "delivery_ratio",
+            "direction": "asc",
+            "completion_first": false,
+            "tiebreak": null,
+            "rationale": "启发式搜索：主键 delivery_ratio。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--delivery_ratio-P--3e8aa85086",
+            "campus_baseline_v1--delivery_ratio-P--b257512b7b",
+            "campus_train_tight--delivery_ratio-P--7f043009a1",
+            "campus_train_tight--delivery_ratio-P--5419bec126",
+            "campus_train_loose--delivery_ratio-P--137978438e",
+            "campus_train_loose--delivery_ratio-P--7ac4cfecc0"
+          ],
+          "session_completion_rate": 0.4657350339553729,
+          "demand_satisfaction_rate": 0.89669243968711,
+          "energy_cost_cny": 432.11278145744245,
+          "peak_power_kw": 59.99969559857126,
+          "constraint_violations": 0,
+          "spread": 0.16109969754037554,
+          "n_simulations": 6
+        },
+        {
+          "spec": {
+            "name": "remaining_demand-P+estimated_departure",
+            "primary": "remaining_demand",
+            "direction": "asc",
+            "completion_first": false,
+            "tiebreak": "estimated_departure",
+            "rationale": "启发式搜索：主键 remaining_demand，次级键 estimated_departure。",
+            "baseline": false
+          },
+          "run_ids": [
+            "campus_baseline_v1--remaining_demand-P+estimated_departure--33105d75c7",
+            "campus_baseline_v1--remaining_demand-P+estimated_departure--0ded99cc9c",
+            "campus_train_tight--remaining_demand-P+estimated_departure--c8992d6bea",
+            "campus_train_tight--remaining_demand-P+estimated_departure--0093a8f5c9",
+            "campus_train_loose--remaining_demand-P+estimated_departure--8e2566a138",
+            "campus_train_loose--remaining_demand-P+estimated_departure--8843afb471"
+          ],
+          "session_completion_rate": 0.871043771043771,
+          "demand_satisfaction_rate": 0.9243790721936245,
+          "energy_cost_cny": 443.12187228333204,
+          "peak_power_kw": 59.99994394834406,
+          "constraint_violations": 0,
+          "spread": 0.09124579124579124,
+          "n_simulations": 6
+        }
+      ],
+      "best_so_far": "estimated_departure-CF+laxity",
+      "best_value": 0.9204545454545454,
+      "improved": false,
+      "simulations_used": 69
+    }
+  ],
+  "baseline_outcomes": [
+    {
+      "spec": {
+        "name": "FCFS",
+        "primary": "arrival",
+        "direction": "asc",
+        "completion_first": false,
+        "tiebreak": null,
+        "rationale": "官方基准：先到先服务。",
+        "baseline": true
+      },
+      "run_ids": [
+        "campus_baseline_v1--FCFS--595d77fc17",
+        "campus_baseline_v1--FCFS--80839c240f",
+        "campus_train_tight--FCFS--e18abc4563",
+        "campus_train_tight--FCFS--9b9228aa9c",
+        "campus_train_loose--FCFS--8ee5c06a85",
+        "campus_train_loose--FCFS--d7a2cdac32"
+      ],
+      "session_completion_rate": 0.7439393939393938,
+      "demand_satisfaction_rate": 0.9426621785987241,
+      "energy_cost_cny": 450.9447476136554,
+      "peak_power_kw": 59.999878271531564,
+      "constraint_violations": 0,
+      "spread": 0.10101010101010104,
+      "n_simulations": 6
+    },
+    {
+      "spec": {
+        "name": "EDF",
+        "primary": "estimated_departure",
+        "direction": "asc",
+        "completion_first": false,
+        "tiebreak": null,
+        "rationale": "官方基准：最早离站优先。",
+        "baseline": true
+      },
+      "run_ids": [
+        "campus_baseline_v1--EDF--5570508019",
+        "campus_baseline_v1--EDF--03a8296388",
+        "campus_train_tight--EDF--acd760c911",
+        "campus_train_tight--EDF--e654baf927",
+        "campus_train_loose--EDF--6306f8fa9a",
+        "campus_train_loose--EDF--62d9a43f7d"
+      ],
+      "session_completion_rate": 0.7873737373737374,
+      "demand_satisfaction_rate": 0.9418416544435741,
+      "energy_cost_cny": 450.4894316404839,
+      "peak_power_kw": 59.9998549111069,
+      "constraint_violations": 0,
+      "spread": 0.08585858585858586,
+      "n_simulations": 6
+    },
+    {
+      "spec": {
+        "name": "LLF",
+        "primary": "laxity",
+        "direction": "asc",
+        "completion_first": false,
+        "tiebreak": null,
+        "rationale": "官方基准：最小松弛时间优先。松弛时间每周期重算，已获供电的车辆会被逐渐降级，因而可能把能量摊薄。",
+        "baseline": true
+      },
+      "run_ids": [
+        "campus_baseline_v1--LLF--ff52a416cf",
+        "campus_baseline_v1--LLF--c90fafb258",
+        "campus_train_tight--LLF--bb0ab3c7af",
+        "campus_train_tight--LLF--0747a2fcf6",
+        "campus_train_loose--LLF--8c903b8331",
+        "campus_train_loose--LLF--27bfb39e8f"
+      ],
+      "session_completion_rate": 0.594949494949495,
+      "demand_satisfaction_rate": 0.948175960221887,
+      "energy_cost_cny": 453.2195024721124,
+      "peak_power_kw": 59.9998462610015,
+      "constraint_violations": 0,
+      "spread": 0.19898989898989897,
+      "n_simulations": 6
+    }
+  ],
+  "best_candidate": {
+    "spec": {
+      "name": "estimated_departure-CF+laxity",
+      "primary": "estimated_departure",
+      "direction": "asc",
+      "completion_first": true,
+      "tiebreak": "laxity",
+      "rationale": "启发式搜索：主键 estimated_departure，并优先排出能在剩余时间内充满的车辆，次级键 laxity。",
+      "baseline": false
+    },
+    "run_ids": [
+      "campus_baseline_v1--estimated_departure-CF+laxity--887a26bea1",
+      "campus_baseline_v1--estimated_departure-CF+laxity--13f6799411",
+      "campus_train_tight--estimated_departure-CF+laxity--88a4f8f296",
+      "campus_train_tight--estimated_departure-CF+laxity--4af26281f9",
+      "campus_train_loose--estimated_departure-CF+laxity--4c68740c78",
+      "campus_train_loose--estimated_departure-CF+laxity--21a776bbbb"
+    ],
+    "session_completion_rate": 0.9204545454545454,
+    "demand_satisfaction_rate": 0.9293328508814707,
+    "energy_cost_cny": 445.2534050209061,
+    "peak_power_kw": 59.999877342892425,
+    "constraint_violations": 0,
+    "spread": 0.047979797979797977,
+    "n_simulations": 6
+  },
+  "validation": {
+    "candidate_name": "estimated_departure-CF+laxity",
+    "scenario_ids": [
+      "campus_holdout_a",
+      "campus_holdout_b"
+    ],
+    "candidate_completion_rate": 0.8675741076830006,
+    "best_baseline_name": "EDF",
+    "best_baseline_completion_rate": 0.5951073805202661,
+    "improvement": 0.27246672716273446,
+    "passed": true,
+    "run_ids": [
+      "campus_holdout_a--estimated_departure-CF+laxity--d6d50de451",
+      "campus_holdout_a--estimated_departure-CF+laxity--b1d89514f9",
+      "campus_holdout_b--estimated_departure-CF+laxity--7bd49a8c01",
+      "campus_holdout_b--estimated_departure-CF+laxity--9b9a921622",
+      "campus_holdout_a--EDF--fe217202b3",
+      "campus_holdout_a--EDF--886a10f22d",
+      "campus_holdout_b--EDF--a3337ee2fe",
+      "campus_holdout_b--EDF--ed21dda1b8"
+    ]
+  },
+  "conclusion": "在已测试范围与预算内，表现最好的可行候选是 **estimated_departure-CF+laxity**（session_completion_rate = 0.9205），高于官方基准中最优的 EDF（0.7874），差值 +0.1331。\n搜索范围：3 个实验场景，共评测 9 个候选策略，消耗 77 次仿真、7.6 秒。\n该候选的策略含义：启发式搜索：主键 estimated_departure，并优先排出能在剩余时间内充满的车辆，次级键 laxity。\n**这是一次有代价的改进**，相对基准同时变差的指标：需求满足率（能量口径）由 0.9418 降到 0.9293（基准 EDF）。主目标的提升并非免费，选型时需按实际运营目标权衡。\n在**未参与筛选**的保留场景（campus_holdout_a, campus_holdout_b）上复验，该候选仍然胜出：0.8676 对 EDF 的 0.5951（差值 +0.2725）。",
+  "caveats": [
+    "本结论只在已测试的 3 个实验场景与给定预算内成立，**不是全局最优**，也不构成对未测试场景的保证。",
+    "停止原因：max_rounds（上限 3 轮 / 200 次仿真 / 180 秒）。",
+    "该候选以牺牲其他指标为代价换取主目标提升，结论不应表述为「全面更优」。",
+    "候选策略来自受控的排序键词汇组合，不是任意代码；其行为差异全部来自分配优先级，不改变仿真物理模型，也不涉及真实桩控。"
+  ],
+  "simulations_used": 77,
+  "elapsed_seconds": 7.575,
+  "all_run_ids": [
+    "campus_baseline_v1--EDF--03a8296388",
+    "campus_baseline_v1--EDF--5570508019",
+    "campus_baseline_v1--FCFS--595d77fc17",
+    "campus_baseline_v1--FCFS--80839c240f",
+    "campus_baseline_v1--LLF--c90fafb258",
+    "campus_baseline_v1--LLF--ff52a416cf",
+    "campus_baseline_v1--arrival-CF--6470cb088f",
+    "campus_baseline_v1--arrival-CF--a6c8379835",
+    "campus_baseline_v1--delivery_ratio-P--3e8aa85086",
+    "campus_baseline_v1--delivery_ratio-P--b257512b7b",
+    "campus_baseline_v1--estimated_departure-CF+laxity--13f6799411",
+    "campus_baseline_v1--estimated_departure-CF+laxity--887a26bea1",
+    "campus_baseline_v1--estimated_departure-CF--1ac76240e2",
+    "campus_baseline_v1--estimated_departure-CF--e2e6ec4704",
+    "campus_baseline_v1--laxity-CF+arrival--50bd77e6f0",
+    "campus_baseline_v1--laxity-CF+arrival--84447b2e4b",
+    "campus_baseline_v1--laxity-CF+estimated_departure--999eb49a38",
+    "campus_baseline_v1--laxity-CF+estimated_departure--cfaa87eb84",
+    "campus_baseline_v1--laxity-CF--887aa5946c",
+    "campus_baseline_v1--laxity-CF--d5e6caa823",
+    "campus_baseline_v1--remaining_demand-CF--1355c9b35a",
+    "campus_baseline_v1--remaining_demand-CF--f4fa550694",
+    "campus_baseline_v1--remaining_demand-P+estimated_departure--0ded99cc9c",
+    "campus_baseline_v1--remaining_demand-P+estimated_departure--33105d75c7",
+    "campus_holdout_a--EDF--886a10f22d",
+    "campus_holdout_a--EDF--fe217202b3",
+    "campus_holdout_a--estimated_departure-CF+laxity--b1d89514f9",
+    "campus_holdout_a--estimated_departure-CF+laxity--d6d50de451",
+    "campus_holdout_b--EDF--a3337ee2fe",
+    "campus_holdout_b--EDF--ed21dda1b8",
+    "campus_holdout_b--estimated_departure-CF+laxity--7bd49a8c01",
+    "campus_holdout_b--estimated_departure-CF+laxity--9b9a921622",
+    "campus_train_loose--EDF--62d9a43f7d",
+    "campus_train_loose--EDF--6306f8fa9a",
+    "campus_train_loose--FCFS--8ee5c06a85",
+    "campus_train_loose--FCFS--d7a2cdac32",
+    "campus_train_loose--LLF--27bfb39e8f",
+    "campus_train_loose--LLF--8c903b8331",
+    "campus_train_loose--arrival-CF--17224fb5b9",
+    "campus_train_loose--arrival-CF--954b992250",
+    "campus_train_loose--delivery_ratio-P--137978438e",
+    "campus_train_loose--delivery_ratio-P--7ac4cfecc0",
+    "campus_train_loose--estimated_departure-CF+laxity--21a776bbbb",
+    "campus_train_loose--estimated_departure-CF+laxity--4c68740c78",
+    "campus_train_loose--estimated_departure-CF--5905880877",
+    "campus_train_loose--estimated_departure-CF--c42b5c2890",
+    "campus_train_loose--laxity-CF+arrival--0cf3cbbbef",
+    "campus_train_loose--laxity-CF+arrival--d4cec4cd68",
+    "campus_train_loose--laxity-CF+estimated_departure--68768704a3",
+    "campus_train_loose--laxity-CF+estimated_departure--c4bc11eccc",
+    "campus_train_loose--laxity-CF--d7baba7aa6",
+    "campus_train_loose--laxity-CF--e6a9821b8d",
+    "campus_train_loose--remaining_demand-CF--4be9427739",
+    "campus_train_loose--remaining_demand-CF--ad16c2fc25",
+    "campus_train_loose--remaining_demand-P+estimated_departure--8843afb471",
+    "campus_train_loose--remaining_demand-P+estimated_departure--8e2566a138",
+    "campus_train_tight--EDF--acd760c911",
+    "campus_train_tight--EDF--e654baf927",
+    "campus_train_tight--FCFS--9b9228aa9c",
+    "campus_train_tight--FCFS--e18abc4563",
+    "campus_train_tight--LLF--0747a2fcf6",
+    "campus_train_tight--LLF--bb0ab3c7af",
+    "campus_train_tight--arrival-CF--17781c2f38",
+    "campus_train_tight--arrival-CF--fbf912acdf",
+    "campus_train_tight--delivery_ratio-P--5419bec126",
+    "campus_train_tight--delivery_ratio-P--7f043009a1",
+    "campus_train_tight--estimated_departure-CF+laxity--4af26281f9",
+    "campus_train_tight--estimated_departure-CF+laxity--88a4f8f296",
+    "campus_train_tight--estimated_departure-CF--02d8e2c372",
+    "campus_train_tight--estimated_departure-CF--d71d1ebb4f",
+    "campus_train_tight--laxity-CF+arrival--10223fcb38",
+    "campus_train_tight--laxity-CF+arrival--29989bd11c",
+    "campus_train_tight--laxity-CF+estimated_departure--5db1bc67c7",
+    "campus_train_tight--laxity-CF+estimated_departure--ff50758046",
+    "campus_train_tight--laxity-CF--4e3bc16d80",
+    "campus_train_tight--laxity-CF--575bcd81af",
+    "campus_train_tight--remaining_demand-CF--9b8250dd8e",
+    "campus_train_tight--remaining_demand-CF--df76c8a58f",
+    "campus_train_tight--remaining_demand-P+estimated_departure--0093a8f5c9",
+    "campus_train_tight--remaining_demand-P+estimated_departure--c8992d6bea"
+  ]
+}

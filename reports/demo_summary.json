@@ -1,0 +1,78 @@
+{
+  "batch": {
+    "FCFS": {
+      "completion": 0.5636,
+      "satisfaction": 0.9033
+    },
+    "EDF": {
+      "completion": 0.6909,
+      "satisfaction": 0.9027
+    },
+    "LLF": {
+      "completion": 0.2364,
+      "satisfaction": 0.9133
+    }
+  },
+  "winners::session_completion_rate": {
+    "EDF": 17,
+    "LLF": 2,
+    "FCFS": 1
+  },
+  "winners::peak_power_kw": {
+    "FCFS": 7,
+    "LLF": 7,
+    "EDF": 6
+  },
+  "winners::energy_cost_cny": {
+    "LLF": 3,
+    "EDF": 11,
+    "FCFS": 6
+  },
+  "sweep_run_ids": 120,
+  "peak_kw": {
+    "FCFS": 60.0,
+    "EDF": 60.0,
+    "LLF": 60.0
+  },
+  "agent": {
+    "report_id": "agent--af069887aa",
+    "stop_reason": "max_rounds",
+    "simulations_used": 77,
+    "elapsed_seconds": 7.575,
+    "baselines": {
+      "FCFS": 0.7439,
+      "EDF": 0.7874,
+      "LLF": 0.5949
+    },
+    "best": "estimated_departure-CF+laxity",
+    "best_completion": 0.9205,
+    "validation": {
+      "candidate_name": "estimated_departure-CF+laxity",
+      "scenario_ids": [
+        "campus_holdout_a",
+        "campus_holdout_b"
+      ],
+      "candidate_completion_rate": 0.8675741076830006,
+      "best_baseline_name": "EDF",
+      "best_baseline_completion_rate": 0.5951073805202661,
+      "improvement": 0.27246672716273446,
+      "passed": true,
+      "run_ids": [
+        "campus_holdout_a--estimated_departure-CF+laxity--d6d50de451",
+        "campus_holdout_a--estimated_departure-CF+laxity--b1d89514f9",
+        "campus_holdout_b--estimated_departure-CF+laxity--7bd49a8c01",
+        "campus_holdout_b--estimated_departure-CF+laxity--9b9a921622",
+        "campus_holdout_a--EDF--fe217202b3",
+        "campus_holdout_a--EDF--886a10f22d",
+        "campus_holdout_b--EDF--a3337ee2fe",
+        "campus_holdout_b--EDF--ed21dda1b8"
+      ]
+    },
+    "conclusion": "在已测试范围与预算内，表现最好的可行候选是 **estimated_departure-CF+laxity**（session_completion_rate = 0.9205），高于官方基准中最优的 EDF（0.7874），差值 +0.1331。\n搜索范围：3 个实验场景，共评测 9 个候选策略，消耗 77 次仿真、7.6 秒。\n该候选的策略含义：启发式搜索：主键 estimated_departure，并优先排出能在剩余时间内充满的车辆，次级键 laxity。\n**这是一次有代价的改进**，相对基准同时变差的指标：需求满足率（能量口径）由 0.9418 降到 0.9293（基准 EDF）。主目标的提升并非免费，选型时需按实际运营目标权衡。\n在**未参与筛选**的保留场景（campus_holdout_a, campus_holdout_b）上复验，该候选仍然胜出：0.8676 对 EDF 的 0.5951（差值 +0.2725）。"
+  },
+  "counts": {
+    "batches": 1,
+    "runs": 203
+  },
+  "wall_seconds": 20.62
+}

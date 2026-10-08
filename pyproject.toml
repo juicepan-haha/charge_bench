@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chargebench"
+version = "0.1.0"
+description = "AI-powered EV Charging Scheduling Benchmark & Simulation Lab"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # acnportal/acnsim/base.py:17 依赖 pkg_resources，而 setuptools 81+ 已移除该模块。
+    # 缺了这条上界，`import acnportal` 会直接失败，整个仿真层不可用。见 PLAN.md §1。
+    "setuptools<81",
+    "acnportal==0.3.3",
+    # acnportal 0.3.3 已停止维护，锁住科学计算栈的主版本，避免上游大版本升级静默改变数值行为。
+    "numpy<3",
+    "pandas<4",
+    # 场景/结果的输入校验（取值范围、非法组合）是阶段 1 的交付物之一，故依赖 pydantic v2。
+    "pydantic>=2,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+# MCP Server（阶段 7）。mcp 2.x 已把 FastMCP 改名为 MCPServer —— 见 docs/PROTOCOL.md §10
+mcp = ["mcp>=2,<3"]
+ui = ["streamlit>=1.40"]
+
+[tool.setuptools.packages.find]
+include = ["chargebench*"]
+
+[project.scripts]
+chargebench = "chargebench.cli:main"
+chargebench-mcp = "chargebench.mcp_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,38 @@
+# ChargeBench AI — 已验证依赖快照（2026-10-09）
+# 环境：Python 3.14.4 (linux x86_64) + python3 -m venv
+# 状态：acnportal 全部 146 个自带测试通过；scratch/acn_e2e_verified.py 通过
+#
+# 关键约束：setuptools 必须 <81，否则 acnportal/acnsim/base.py 的
+# `import pkg_resources` 失败，整个包无法导入。
+#
+# 安装：
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.lock.txt
+#
+# 重新生成：.venv/bin/pip freeze | grep -vE '^(pytest|iniconfig|pluggy|pygments)'
+acnportal==0.3.3
+certifi==2026.7.22
+charset-normalizer==3.5.2
+cloudpickle==3.1.2
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.66.1
+idna==3.20
+joblib==1.6.0
+kiwisolver==1.5.1
+matplotlib==3.11.2
+narwhals==2.26.0
+numpy==2.5.3
+packaging==26.3
+pandas==3.0.6
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+pytz==2026.5
+requests==2.34.2
+scikit-learn==1.9.1
+scipy==1.18.1
+setuptools==80.10.2
+six==1.17.0
+threadpoolctl==3.7.0
+typing_extensions==4.16.0
+urllib3==2.8.0

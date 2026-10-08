@@ -1,0 +1,3115 @@
+{
+  "sweeps": {
+    "session_completion_rate": {
+      "sweep_id": "sweep--b527cb11f1",
+      "schema_version": "1.0",
+      "created_at": "2026-10-09T01:38:57.870311",
+      "base_scenario_id": "campus_baseline_v1",
+      "x_name": "load_intensity",
+      "x_values": [
+        0.5,
+        0.7,
+        0.9,
+        1.1,
+        1.3
+      ],
+      "y_name": "deadline_tightness",
+      "y_values": [
+        0.4,
+        0.55,
+        0.7,
+        0.85
+      ],
+      "algorithms": [
+        "FCFS",
+        "EDF",
+        "LLF"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "primary_metric": "session_completion_rate",
+      "metric_direction": "max",
+      "score_rule": "1) 硬约束优先：任何种子下 constraint_violations > 0 的算法在该格点取消资格（方案 §5 原则 3，不允许把违规供电当成更优结果）；2) 主目标：session_completion_rate 的跨种子均值，方向为越大越好；3) 均值相同时，取跨种子波动（spread）更小者 —— 均值相同但波动大的算法不可信；4) 仍相同则按算法名升序取首个，保证确定性。越限判定采用相对容差 max(1e-3 A, 限值×1e-4)，用于吸收调度器二分搜索的浮点残差，详见 metrics.violation_threshold_a。",
+      "cells": [
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.5357142857142857,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.81925455876285,
+              "peak_power_kw_mean": 59.999453704234895,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.8729694630338,
+              "peak_power_kw_mean": 59.999511196475034,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.75211904107505,
+              "peak_power_kw_mean": 59.99956008563048,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.75,
+          "port_constrained": false,
+          "sessions_dropped": 6,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.51817994916496,
+              "peak_power_kw_mean": 59.99988808090709,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.2583914760073,
+              "peak_power_kw_mean": 59.99988307118995,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.1411714784191,
+              "peak_power_kw_mean": 59.999877316950325,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.9642857142857143,
+          "port_constrained": false,
+          "sessions_dropped": 16,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.9346478688004,
+              "peak_power_kw_mean": 59.99989677498614,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.0764522791874,
+              "peak_power_kw_mean": 59.999993400763955,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.96123897113995,
+              "peak_power_kw_mean": 59.999976279933634,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.1785714285714286,
+          "port_constrained": true,
+          "sessions_dropped": 25,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 379.43862302386975,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.0492204503752,
+              "peak_power_kw_mean": 59.999918482072104,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.64585527276176,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.3928571428571428,
+          "port_constrained": true,
+          "sessions_dropped": 30,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9973458939414221,
+              "session_completion_rate_mean": 0.9821428571428572,
+              "energy_cost_cny_mean": 360.2612074623864,
+              "peak_power_kw_mean": 59.99995958489903,
+              "mean_delivery_ratio_mean": 0.9967345114749089,
+              "worst_delivery_ratio_mean": 0.9085648460055677,
+              "constraint_violations_max": 0,
+              "spread": 0.0357142857142857
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.4150129328657,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.81759268546983,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.38961038961038963,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05037235922026,
+              "peak_power_kw_mean": 59.99930682889707,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.5454545454545454,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9983393151507608,
+              "session_completion_rate_mean": 0.9915254237288136,
+              "energy_cost_cny_mean": 389.5062612243433,
+              "peak_power_kw_mean": 59.99992294967035,
+              "mean_delivery_ratio_mean": 0.9973340000791449,
+              "worst_delivery_ratio_mean": 0.8427060046695474,
+              "constraint_violations_max": 0,
+              "spread": 0.016949152542372836
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.1850324827657,
+              "peak_power_kw_mean": 59.99991955911051,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.20980866250625,
+              "peak_power_kw_mean": 59.999925011795185,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.7012987012987013,
+          "port_constrained": false,
+          "sessions_dropped": 4,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9889559465450033,
+              "session_completion_rate_mean": 0.9099616858237547,
+              "energy_cost_cny_mean": 461.0665690836209,
+              "peak_power_kw_mean": 59.999929333930595,
+              "mean_delivery_ratio_mean": 0.9862549860894836,
+              "worst_delivery_ratio_mean": 0.7776960848314091,
+              "constraint_violations_max": 0,
+              "spread": 0.04214559386973182
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9896698556212009,
+              "session_completion_rate_mean": 0.9179438058748404,
+              "energy_cost_cny_mean": 461.224912950428,
+              "peak_power_kw_mean": 59.999975008403815,
+              "mean_delivery_ratio_mean": 0.9931825348242136,
+              "worst_delivery_ratio_mean": 0.8065379714337659,
+              "constraint_violations_max": 0,
+              "spread": 0.09514687100894004
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0000000000000002,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 464.85636176528874,
+              "peak_power_kw_mean": 59.999998265554474,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.8571428571428571,
+          "port_constrained": false,
+          "sessions_dropped": 12,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9506714590719862,
+              "session_completion_rate_mean": 0.7306547619047619,
+              "energy_cost_cny_mean": 465.5375496602371,
+              "peak_power_kw_mean": 59.99989840406931,
+              "mean_delivery_ratio_mean": 0.9427137799458373,
+              "worst_delivery_ratio_mean": 0.3943476931675507,
+              "constraint_violations_max": 0,
+              "spread": 0.25297619047619047
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9601575795235079,
+              "session_completion_rate_mean": 0.8343962585034014,
+              "energy_cost_cny_mean": 469.0253677255101,
+              "peak_power_kw_mean": 59.999947874383864,
+              "mean_delivery_ratio_mean": 0.9715795556661699,
+              "worst_delivery_ratio_mean": 0.6282284180069235,
+              "constraint_violations_max": 0,
+              "spread": 0.12712585034013602
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9758482952040657,
+              "session_completion_rate_mean": 0.7291666666666666,
+              "energy_cost_cny_mean": 474.71970924739435,
+              "peak_power_kw_mean": 59.99986031272047,
+              "mean_delivery_ratio_mean": 0.976136439351233,
+              "worst_delivery_ratio_mean": 0.893407726379212,
+              "constraint_violations_max": 0,
+              "spread": 0.5416666666666667
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 1.0129870129870129,
+          "port_constrained": true,
+          "sessions_dropped": 17,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9304728533674305,
+              "session_completion_rate_mean": 0.6845238095238095,
+              "energy_cost_cny_mean": 472.0253836731925,
+              "peak_power_kw_mean": 59.99990768852233,
+              "mean_delivery_ratio_mean": 0.9128158812704108,
+              "worst_delivery_ratio_mean": 0.11391046345462055,
+              "constraint_violations_max": 0,
+              "spread": 0.13095238095238093
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9386278748178009,
+              "session_completion_rate_mean": 0.7905844155844155,
+              "energy_cost_cny_mean": 475.0876707444516,
+              "peak_power_kw_mean": 59.99994970488501,
+              "mean_delivery_ratio_mean": 0.9511507849062452,
+              "worst_delivery_ratio_mean": 0.6160904984858369,
+              "constraint_violations_max": 0,
+              "spread": 0.009740259740259716
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.942692245447605,
+              "session_completion_rate_mean": 0.42640692640692646,
+              "energy_cost_cny_mean": 476.64295394863757,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.9423833399968752,
+              "worst_delivery_ratio_mean": 0.7733802857392897,
+              "constraint_violations_max": 0,
+              "spread": 0.329004329004329
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.30612244897959184,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99914857499654,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999380686314048,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.1241568667897,
+              "peak_power_kw_mean": 59.99944242787461,
+              "mean_delivery_ratio_mean": 0.9999508401888221,
+              "worst_delivery_ratio_mean": 0.9970504113293268,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99923117058697,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.42857142857142855,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9910321137427902,
+              "session_completion_rate_mean": 0.95,
+              "energy_cost_cny_mean": 384.13845859266996,
+              "peak_power_kw_mean": 59.999493169342884,
+              "mean_delivery_ratio_mean": 0.9880044340884366,
+              "worst_delivery_ratio_mean": 0.8136684730018486,
+              "constraint_violations_max": 0,
+              "spread": 0.09999999999999998
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9909957863397338,
+              "session_completion_rate_mean": 0.9416666666666667,
+              "energy_cost_cny_mean": 384.0550852444412,
+              "peak_power_kw_mean": 59.99973448212415,
+              "mean_delivery_ratio_mean": 0.9926495894657072,
+              "worst_delivery_ratio_mean": 0.8459757470241087,
+              "constraint_violations_max": 0,
+              "spread": 0.08333333333333326
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.997024164780862,
+              "session_completion_rate_mean": 0.925,
+              "energy_cost_cny_mean": 387.54693459299943,
+              "peak_power_kw_mean": 59.999797658859045,
+              "mean_delivery_ratio_mean": 0.9969863155829644,
+              "worst_delivery_ratio_mean": 0.9622083932167381,
+              "constraint_violations_max": 0,
+              "spread": 0.15000000000000002
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.5510204081632653,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.946831341169464,
+              "session_completion_rate_mean": 0.7050847457627119,
+              "energy_cost_cny_mean": 464.0099700863391,
+              "peak_power_kw_mean": 59.99999826555447,
+              "mean_delivery_ratio_mean": 0.9359532172608513,
+              "worst_delivery_ratio_mean": 0.36110315049415265,
+              "constraint_violations_max": 0,
+              "spread": 0.18983050847457628
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9436738151447006,
+              "session_completion_rate_mean": 0.7807909604519774,
+              "energy_cost_cny_mean": 462.59172787291084,
+              "peak_power_kw_mean": 59.99995256747389,
+              "mean_delivery_ratio_mean": 0.9533970792805444,
+              "worst_delivery_ratio_mean": 0.6221755958478417,
+              "constraint_violations_max": 0,
+              "spread": 0.17175141242937852
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9632805054630943,
+              "session_completion_rate_mean": 0.6618644067796611,
+              "energy_cost_cny_mean": 470.2515254387655,
+              "peak_power_kw_mean": 59.99999495182473,
+              "mean_delivery_ratio_mean": 0.9613154515521989,
+              "worst_delivery_ratio_mean": 0.7690415526574851,
+              "constraint_violations_max": 0,
+              "spread": 0.476271186440678
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.673469387755102,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343200131705082,
+              "session_completion_rate_mean": 0.37272727272727274,
+              "energy_cost_cny_mean": 480.65926837536256,
+              "peak_power_kw_mean": 59.99988919724335,
+              "mean_delivery_ratio_mean": 0.8193230264680725,
+              "worst_delivery_ratio_mean": 0.1938866337986384,
+              "constraint_violations_max": 0,
+              "spread": 0.054545454545454564
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8337031043213683,
+              "session_completion_rate_mean": 0.48636363636363633,
+              "energy_cost_cny_mean": 480.39576144875525,
+              "peak_power_kw_mean": 59.99998792470245,
+              "mean_delivery_ratio_mean": 0.8612609943810005,
+              "worst_delivery_ratio_mean": 0.34949533686034456,
+              "constraint_violations_max": 0,
+              "spread": 0.027272727272727282
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343198410482829,
+              "session_completion_rate_mean": 0.25606060606060604,
+              "energy_cost_cny_mean": 480.6591430900848,
+              "peak_power_kw_mean": 59.99977517987565,
+              "mean_delivery_ratio_mean": 0.8345729141023892,
+              "worst_delivery_ratio_mean": 0.5499742668295846,
+              "constraint_violations_max": 0,
+              "spread": 0.2212121212121212
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.7959183673469388,
+          "port_constrained": false,
+          "sessions_dropped": 10,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7935903055147645,
+              "session_completion_rate_mean": 0.3764705882352941,
+              "energy_cost_cny_mean": 476.1528400230175,
+              "peak_power_kw_mean": 59.99988036320911,
+              "mean_delivery_ratio_mean": 0.7739437462697962,
+              "worst_delivery_ratio_mean": 0.16629774060568145,
+              "constraint_violations_max": 0,
+              "spread": 0.047058823529411764
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7966875769410682,
+              "session_completion_rate_mean": 0.4749019607843137,
+              "energy_cost_cny_mean": 477.565927762432,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 0.8286583309310386,
+              "worst_delivery_ratio_mean": 0.38861663526356915,
+              "constraint_violations_max": 0,
+              "spread": 0.06980392156862741
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7976760138889591,
+              "session_completion_rate_mean": 0.1476470588235294,
+              "energy_cost_cny_mean": 478.0138970924545,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.7980882104774214,
+              "worst_delivery_ratio_mean": 0.540199303122687,
+              "constraint_violations_max": 0,
+              "spread": 0.17529411764705882
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.25210084033613445,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974547154227339,
+              "session_completion_rate_mean": 0.9833333333333334,
+              "energy_cost_cny_mean": 270.06395472923543,
+              "peak_power_kw_mean": 59.99928718589224,
+              "mean_delivery_ratio_mean": 0.9970392971413713,
+              "worst_delivery_ratio_mean": 0.8927143877096095,
+              "constraint_violations_max": 0,
+              "spread": 0.033333333333333326
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974279753276355,
+              "session_completion_rate_mean": 0.975,
+              "energy_cost_cny_mean": 270.0052826275229,
+              "peak_power_kw_mean": 59.99925824844473,
+              "mean_delivery_ratio_mean": 0.997731289413734,
+              "worst_delivery_ratio_mean": 0.9403284533591985,
+              "constraint_violations_max": 0,
+              "spread": 0.050000000000000044
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 270.9773781152604,
+              "peak_power_kw_mean": 59.99931816632508,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.35294117647058826,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9736776467328875,
+              "session_completion_rate_mean": 0.875,
+              "energy_cost_cny_mean": 373.61447874379905,
+              "peak_power_kw_mean": 59.99960382663932,
+              "mean_delivery_ratio_mean": 0.9707721475840416,
+              "worst_delivery_ratio_mean": 0.5977437145905125,
+              "constraint_violations_max": 0,
+              "spread": 0.1499999999999999
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9719654410357395,
+              "session_completion_rate_mean": 0.9,
+              "energy_cost_cny_mean": 372.8653429963621,
+              "peak_power_kw_mean": 59.999490018464954,
+              "mean_delivery_ratio_mean": 0.9751343207604979,
+              "worst_delivery_ratio_mean": 0.6698884424786182,
+              "constraint_violations_max": 0,
+              "spread": 0.1333333333333333
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9791575617314423,
+              "session_completion_rate_mean": 0.8583333333333334,
+              "energy_cost_cny_mean": 376.397335720778,
+              "peak_power_kw_mean": 59.99959914177161,
+              "mean_delivery_ratio_mean": 0.978853814071515,
+              "worst_delivery_ratio_mean": 0.8717345292593912,
+              "constraint_violations_max": 0,
+              "spread": 0.2833333333333333
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.453781512605042,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9165439505423367,
+              "session_completion_rate_mean": 0.6416666666666667,
+              "energy_cost_cny_mean": 450.9842305207936,
+              "peak_power_kw_mean": 59.99969331225236,
+              "mean_delivery_ratio_mean": 0.9086725998840594,
+              "worst_delivery_ratio_mean": 0.372671267371689,
+              "constraint_violations_max": 0,
+              "spread": 0.25
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9153536623233012,
+              "session_completion_rate_mean": 0.6916666666666667,
+              "energy_cost_cny_mean": 450.4672754226207,
+              "peak_power_kw_mean": 59.99972631493689,
+              "mean_delivery_ratio_mean": 0.9257527470351299,
+              "worst_delivery_ratio_mean": 0.4849300614244565,
+              "constraint_violations_max": 0,
+              "spread": 0.21666666666666667
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9278366776788258,
+              "session_completion_rate_mean": 0.44166666666666665,
+              "energy_cost_cny_mean": 455.8925032682966,
+              "peak_power_kw_mean": 59.999846151011624,
+              "mean_delivery_ratio_mean": 0.9263821668334024,
+              "worst_delivery_ratio_mean": 0.7007151204581512,
+              "constraint_violations_max": 0,
+              "spread": 0.3833333333333333
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.5546218487394958,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.799341272099598,
+              "session_completion_rate_mean": 0.3019774011299435,
+              "energy_cost_cny_mean": 475.9412946529743,
+              "peak_power_kw_mean": 59.999895689485854,
+              "mean_delivery_ratio_mean": 0.7834258938494729,
+              "worst_delivery_ratio_mean": 0.039486795412367805,
+              "constraint_violations_max": 0,
+              "spread": 0.1293785310734463
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7979965451325269,
+              "session_completion_rate_mean": 0.4279661016949152,
+              "energy_cost_cny_mean": 475.33566422935377,
+              "peak_power_kw_mean": 59.9998061821506,
+              "mean_delivery_ratio_mean": 0.8263191418552451,
+              "worst_delivery_ratio_mean": 0.3474505431677526,
+              "constraint_violations_max": 0,
+              "spread": 0.1440677966101695
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7994234163754604,
+              "session_completion_rate_mean": 0.10847457627118645,
+              "energy_cost_cny_mean": 475.99773547878044,
+              "peak_power_kw_mean": 59.99942075943027,
+              "mean_delivery_ratio_mean": 0.796112398147374,
+              "worst_delivery_ratio_mean": 0.48009968347781873,
+              "constraint_violations_max": 0,
+              "spread": 0.18305084745762712
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.6554621848739496,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530729940046,
+              "session_completion_rate_mean": 0.2148809523809524,
+              "energy_cost_cny_mean": 479.9971622350266,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.6839693687659065,
+              "worst_delivery_ratio_mean": 0.0,
+              "constraint_violations_max": 0,
+              "spread": 0.03690476190476191
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996532671047228,
+              "session_completion_rate_mean": 0.31845238095238093,
+              "energy_cost_cny_mean": 479.99732737868635,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.7391884484783364,
+              "worst_delivery_ratio_mean": 0.2653702958186414,
+              "constraint_violations_max": 0,
+              "spread": 0.029761904761904767
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530268553007,
+              "session_completion_rate_mean": 0.058333333333333334,
+              "energy_cost_cny_mean": 479.9971407455508,
+              "peak_power_kw_mean": 59.99946839683855,
+              "mean_delivery_ratio_mean": 0.6956761931864497,
+              "worst_delivery_ratio_mean": 0.32245636277309825,
+              "constraint_violations_max": 0,
+              "spread": 0.11666666666666667
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        }
+      ],
+      "run_ids": [
+        "campus_baseline_v1_L0p5_T0p4--EDF--81e1af03ae",
+        "campus_baseline_v1_L0p5_T0p4--EDF--ab78190758",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--4527566c71",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--5db209658a",
+        "campus_baseline_v1_L0p5_T0p4--LLF--68d5e11948",
+        "campus_baseline_v1_L0p5_T0p4--LLF--8f56d68733",
+        "campus_baseline_v1_L0p5_T0p55--EDF--1639868581",
+        "campus_baseline_v1_L0p5_T0p55--EDF--d5646e2c38",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--604c811589",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--eb65ab779c",
+        "campus_baseline_v1_L0p5_T0p55--LLF--21febbcff3",
+        "campus_baseline_v1_L0p5_T0p55--LLF--4c2a4ef86b",
+        "campus_baseline_v1_L0p5_T0p7--EDF--2e3a64bc0d",
+        "campus_baseline_v1_L0p5_T0p7--EDF--5e521e5cd3",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--403516eca4",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--c34e9c24d4",
+        "campus_baseline_v1_L0p5_T0p7--LLF--5a3e1a25f0",
+        "campus_baseline_v1_L0p5_T0p7--LLF--d94b46d084",
+        "campus_baseline_v1_L0p5_T0p85--EDF--1013124350",
+        "campus_baseline_v1_L0p5_T0p85--EDF--398dd1b25d",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--0eca736cd5",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--eb3e6941d9",
+        "campus_baseline_v1_L0p5_T0p85--LLF--0a255bc265",
+        "campus_baseline_v1_L0p5_T0p85--LLF--1458eb42a3",
+        "campus_baseline_v1_L0p7_T0p4--EDF--6e61406b65",
+        "campus_baseline_v1_L0p7_T0p4--EDF--afc27f0491",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--eda7025eb3",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--fa09ed18e3",
+        "campus_baseline_v1_L0p7_T0p4--LLF--29b0c05383",
+        "campus_baseline_v1_L0p7_T0p4--LLF--524208c428",
+        "campus_baseline_v1_L0p7_T0p55--EDF--764f7b3aeb",
+        "campus_baseline_v1_L0p7_T0p55--EDF--f00efb42bc",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--506c8ccf74",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--8511e2fe23",
+        "campus_baseline_v1_L0p7_T0p55--LLF--9e53443088",
+        "campus_baseline_v1_L0p7_T0p55--LLF--deedde757d",
+        "campus_baseline_v1_L0p7_T0p7--EDF--2ebdebe1d5",
+        "campus_baseline_v1_L0p7_T0p7--EDF--969ee73dac",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--2fcf7c5860",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--43162de594",
+        "campus_baseline_v1_L0p7_T0p7--LLF--c1a6b925f7",
+        "campus_baseline_v1_L0p7_T0p7--LLF--e70256fc51",
+        "campus_baseline_v1_L0p7_T0p85--EDF--e1a8719420",
+        "campus_baseline_v1_L0p7_T0p85--EDF--fcaed558be",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ad6098910a",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ee2e55b5ea",
+        "campus_baseline_v1_L0p7_T0p85--LLF--2e6112a942",
+        "campus_baseline_v1_L0p7_T0p85--LLF--e1d1415bf5",
+        "campus_baseline_v1_L0p9_T0p4--EDF--95eca1022f",
+        "campus_baseline_v1_L0p9_T0p4--EDF--9b6f539274",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--8677c909cf",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--d2a948eb5d",
+        "campus_baseline_v1_L0p9_T0p4--LLF--d682ef2145",
+        "campus_baseline_v1_L0p9_T0p4--LLF--ed88324788",
+        "campus_baseline_v1_L0p9_T0p55--EDF--05258f7f9b",
+        "campus_baseline_v1_L0p9_T0p55--EDF--f298c7d62b",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--470702d744",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--bcb4e25b15",
+        "campus_baseline_v1_L0p9_T0p55--LLF--0e5837f15e",
+        "campus_baseline_v1_L0p9_T0p55--LLF--6935c14a9a",
+        "campus_baseline_v1_L0p9_T0p7--EDF--4a8a88530f",
+        "campus_baseline_v1_L0p9_T0p7--EDF--d8bc05d85e",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--0da78690f2",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--2378d51205",
+        "campus_baseline_v1_L0p9_T0p7--LLF--5352ea4c74",
+        "campus_baseline_v1_L0p9_T0p7--LLF--cf40aa4bb4",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7647220f67",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7a830e448a",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--9e654e399e",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--d7ec116ccc",
+        "campus_baseline_v1_L0p9_T0p85--LLF--380a35217b",
+        "campus_baseline_v1_L0p9_T0p85--LLF--e8bd22612b",
+        "campus_baseline_v1_L1p1_T0p4--EDF--1ce1b5e5c3",
+        "campus_baseline_v1_L1p1_T0p4--EDF--e60436cff0",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--98eef770bd",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--bf89379598",
+        "campus_baseline_v1_L1p1_T0p4--LLF--339692e2e1",
+        "campus_baseline_v1_L1p1_T0p4--LLF--3a55777840",
+        "campus_baseline_v1_L1p1_T0p55--EDF--77bfd92b5e",
+        "campus_baseline_v1_L1p1_T0p55--EDF--8bd29893d1",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6ad1d375a6",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6bc30b78ab",
+        "campus_baseline_v1_L1p1_T0p55--LLF--2f64003fa9",
+        "campus_baseline_v1_L1p1_T0p55--LLF--86bebab597",
+        "campus_baseline_v1_L1p1_T0p7--EDF--3f731e9db5",
+        "campus_baseline_v1_L1p1_T0p7--EDF--e8f77682c7",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--d7ce607f12",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--f9d8ee1074",
+        "campus_baseline_v1_L1p1_T0p7--LLF--8d77879ec0",
+        "campus_baseline_v1_L1p1_T0p7--LLF--b353dad9cb",
+        "campus_baseline_v1_L1p1_T0p85--EDF--44c6b4b547",
+        "campus_baseline_v1_L1p1_T0p85--EDF--e6683269de",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--5face0d55c",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--8d7d00f0f6",
+        "campus_baseline_v1_L1p1_T0p85--LLF--5ab71f04d2",
+        "campus_baseline_v1_L1p1_T0p85--LLF--694f9bed06",
+        "campus_baseline_v1_L1p3_T0p4--EDF--27dd283f8f",
+        "campus_baseline_v1_L1p3_T0p4--EDF--a896108c04",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--1a255220d6",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--72d7343bd3",
+        "campus_baseline_v1_L1p3_T0p4--LLF--620237836b",
+        "campus_baseline_v1_L1p3_T0p4--LLF--dd4e58f55c",
+        "campus_baseline_v1_L1p3_T0p55--EDF--16fefd8ec7",
+        "campus_baseline_v1_L1p3_T0p55--EDF--3036fb4750",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--4966470106",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--e45f1d82e1",
+        "campus_baseline_v1_L1p3_T0p55--LLF--880e0ad5f8",
+        "campus_baseline_v1_L1p3_T0p55--LLF--e60d1774d9",
+        "campus_baseline_v1_L1p3_T0p7--EDF--7a21293448",
+        "campus_baseline_v1_L1p3_T0p7--EDF--e449e372f6",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--4da4060d42",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--e31e69ea28",
+        "campus_baseline_v1_L1p3_T0p7--LLF--39536d1a39",
+        "campus_baseline_v1_L1p3_T0p7--LLF--fbd18308a1",
+        "campus_baseline_v1_L1p3_T0p85--EDF--2d6ba0d9f5",
+        "campus_baseline_v1_L1p3_T0p85--EDF--8b57c83511",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--4eb325a63a",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--d8093e8478",
+        "campus_baseline_v1_L1p3_T0p85--LLF--3be9f99d8d",
+        "campus_baseline_v1_L1p3_T0p85--LLF--f87d8897e6"
+      ]
+    },
+    "peak_power_kw": {
+      "sweep_id": "sweep--b6dd4467e0",
+      "schema_version": "1.0",
+      "created_at": "2026-10-09T01:38:57.870311",
+      "base_scenario_id": "campus_baseline_v1",
+      "x_name": "load_intensity",
+      "x_values": [
+        0.5,
+        0.7,
+        0.9,
+        1.1,
+        1.3
+      ],
+      "y_name": "deadline_tightness",
+      "y_values": [
+        0.4,
+        0.55,
+        0.7,
+        0.85
+      ],
+      "algorithms": [
+        "FCFS",
+        "EDF",
+        "LLF"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "primary_metric": "peak_power_kw",
+      "metric_direction": "min",
+      "score_rule": "1) 硬约束优先：任何种子下 constraint_violations > 0 的算法在该格点取消资格（方案 §5 原则 3，不允许把违规供电当成更优结果）；2) 主目标：peak_power_kw 的跨种子均值，方向为越小越好；3) 均值相同时，取跨种子波动（spread）更小者 —— 均值相同但波动大的算法不可信；4) 仍相同则按算法名升序取首个，保证确定性。越限判定采用相对容差 max(1e-3 A, 限值×1e-4)，用于吸收调度器二分搜索的浮点残差，详见 metrics.violation_threshold_a。",
+      "cells": [
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.5357142857142857,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.81925455876285,
+              "peak_power_kw_mean": 59.999453704234895,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.8729694630338,
+              "peak_power_kw_mean": 59.999511196475034,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.75211904107505,
+              "peak_power_kw_mean": 59.99956008563048,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.75,
+          "port_constrained": false,
+          "sessions_dropped": 6,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.51817994916496,
+              "peak_power_kw_mean": 59.99988808090709,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.2583914760073,
+              "peak_power_kw_mean": 59.99988307118995,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.1411714784191,
+              "peak_power_kw_mean": 59.999877316950325,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.9642857142857143,
+          "port_constrained": false,
+          "sessions_dropped": 16,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.9346478688004,
+              "peak_power_kw_mean": 59.99989677498614,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.0764522791874,
+              "peak_power_kw_mean": 59.999993400763955,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.96123897113995,
+              "peak_power_kw_mean": 59.999976279933634,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.1785714285714286,
+          "port_constrained": true,
+          "sessions_dropped": 25,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 379.43862302386975,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.0492204503752,
+              "peak_power_kw_mean": 59.999918482072104,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.64585527276176,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.3928571428571428,
+          "port_constrained": true,
+          "sessions_dropped": 30,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9973458939414221,
+              "session_completion_rate_mean": 0.9821428571428572,
+              "energy_cost_cny_mean": 360.2612074623864,
+              "peak_power_kw_mean": 59.99995958489903,
+              "mean_delivery_ratio_mean": 0.9967345114749089,
+              "worst_delivery_ratio_mean": 0.9085648460055677,
+              "constraint_violations_max": 0,
+              "spread": 0.0357142857142857
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.4150129328657,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.81759268546983,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.38961038961038963,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05037235922026,
+              "peak_power_kw_mean": 59.99930682889707,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.5454545454545454,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9983393151507608,
+              "session_completion_rate_mean": 0.9915254237288136,
+              "energy_cost_cny_mean": 389.5062612243433,
+              "peak_power_kw_mean": 59.99992294967035,
+              "mean_delivery_ratio_mean": 0.9973340000791449,
+              "worst_delivery_ratio_mean": 0.8427060046695474,
+              "constraint_violations_max": 0,
+              "spread": 0.016949152542372836
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.1850324827657,
+              "peak_power_kw_mean": 59.99991955911051,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.20980866250625,
+              "peak_power_kw_mean": 59.999925011795185,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.7012987012987013,
+          "port_constrained": false,
+          "sessions_dropped": 4,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9889559465450033,
+              "session_completion_rate_mean": 0.9099616858237547,
+              "energy_cost_cny_mean": 461.0665690836209,
+              "peak_power_kw_mean": 59.999929333930595,
+              "mean_delivery_ratio_mean": 0.9862549860894836,
+              "worst_delivery_ratio_mean": 0.7776960848314091,
+              "constraint_violations_max": 0,
+              "spread": 0.04214559386973182
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9896698556212009,
+              "session_completion_rate_mean": 0.9179438058748404,
+              "energy_cost_cny_mean": 461.224912950428,
+              "peak_power_kw_mean": 59.999975008403815,
+              "mean_delivery_ratio_mean": 0.9931825348242136,
+              "worst_delivery_ratio_mean": 0.8065379714337659,
+              "constraint_violations_max": 0,
+              "spread": 0.09514687100894004
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0000000000000002,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 464.85636176528874,
+              "peak_power_kw_mean": 59.999998265554474,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.8571428571428571,
+          "port_constrained": false,
+          "sessions_dropped": 12,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9506714590719862,
+              "session_completion_rate_mean": 0.7306547619047619,
+              "energy_cost_cny_mean": 465.5375496602371,
+              "peak_power_kw_mean": 59.99989840406931,
+              "mean_delivery_ratio_mean": 0.9427137799458373,
+              "worst_delivery_ratio_mean": 0.3943476931675507,
+              "constraint_violations_max": 0,
+              "spread": 0.25297619047619047
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9601575795235079,
+              "session_completion_rate_mean": 0.8343962585034014,
+              "energy_cost_cny_mean": 469.0253677255101,
+              "peak_power_kw_mean": 59.999947874383864,
+              "mean_delivery_ratio_mean": 0.9715795556661699,
+              "worst_delivery_ratio_mean": 0.6282284180069235,
+              "constraint_violations_max": 0,
+              "spread": 0.12712585034013602
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9758482952040657,
+              "session_completion_rate_mean": 0.7291666666666666,
+              "energy_cost_cny_mean": 474.71970924739435,
+              "peak_power_kw_mean": 59.99986031272047,
+              "mean_delivery_ratio_mean": 0.976136439351233,
+              "worst_delivery_ratio_mean": 0.893407726379212,
+              "constraint_violations_max": 0,
+              "spread": 0.5416666666666667
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 1.0129870129870129,
+          "port_constrained": true,
+          "sessions_dropped": 17,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9304728533674305,
+              "session_completion_rate_mean": 0.6845238095238095,
+              "energy_cost_cny_mean": 472.0253836731925,
+              "peak_power_kw_mean": 59.99990768852233,
+              "mean_delivery_ratio_mean": 0.9128158812704108,
+              "worst_delivery_ratio_mean": 0.11391046345462055,
+              "constraint_violations_max": 0,
+              "spread": 0.13095238095238093
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9386278748178009,
+              "session_completion_rate_mean": 0.7905844155844155,
+              "energy_cost_cny_mean": 475.0876707444516,
+              "peak_power_kw_mean": 59.99994970488501,
+              "mean_delivery_ratio_mean": 0.9511507849062452,
+              "worst_delivery_ratio_mean": 0.6160904984858369,
+              "constraint_violations_max": 0,
+              "spread": 0.009740259740259716
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.942692245447605,
+              "session_completion_rate_mean": 0.42640692640692646,
+              "energy_cost_cny_mean": 476.64295394863757,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.9423833399968752,
+              "worst_delivery_ratio_mean": 0.7733802857392897,
+              "constraint_violations_max": 0,
+              "spread": 0.329004329004329
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.30612244897959184,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99914857499654,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999380686314048,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.1241568667897,
+              "peak_power_kw_mean": 59.99944242787461,
+              "mean_delivery_ratio_mean": 0.9999508401888221,
+              "worst_delivery_ratio_mean": 0.9970504113293268,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99923117058697,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.42857142857142855,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9910321137427902,
+              "session_completion_rate_mean": 0.95,
+              "energy_cost_cny_mean": 384.13845859266996,
+              "peak_power_kw_mean": 59.999493169342884,
+              "mean_delivery_ratio_mean": 0.9880044340884366,
+              "worst_delivery_ratio_mean": 0.8136684730018486,
+              "constraint_violations_max": 0,
+              "spread": 0.09999999999999998
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9909957863397338,
+              "session_completion_rate_mean": 0.9416666666666667,
+              "energy_cost_cny_mean": 384.0550852444412,
+              "peak_power_kw_mean": 59.99973448212415,
+              "mean_delivery_ratio_mean": 0.9926495894657072,
+              "worst_delivery_ratio_mean": 0.8459757470241087,
+              "constraint_violations_max": 0,
+              "spread": 0.08333333333333326
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.997024164780862,
+              "session_completion_rate_mean": 0.925,
+              "energy_cost_cny_mean": 387.54693459299943,
+              "peak_power_kw_mean": 59.999797658859045,
+              "mean_delivery_ratio_mean": 0.9969863155829644,
+              "worst_delivery_ratio_mean": 0.9622083932167381,
+              "constraint_violations_max": 0,
+              "spread": 0.15000000000000002
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.5510204081632653,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.946831341169464,
+              "session_completion_rate_mean": 0.7050847457627119,
+              "energy_cost_cny_mean": 464.0099700863391,
+              "peak_power_kw_mean": 59.99999826555447,
+              "mean_delivery_ratio_mean": 0.9359532172608513,
+              "worst_delivery_ratio_mean": 0.36110315049415265,
+              "constraint_violations_max": 0,
+              "spread": 0.18983050847457628
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9436738151447006,
+              "session_completion_rate_mean": 0.7807909604519774,
+              "energy_cost_cny_mean": 462.59172787291084,
+              "peak_power_kw_mean": 59.99995256747389,
+              "mean_delivery_ratio_mean": 0.9533970792805444,
+              "worst_delivery_ratio_mean": 0.6221755958478417,
+              "constraint_violations_max": 0,
+              "spread": 0.17175141242937852
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9632805054630943,
+              "session_completion_rate_mean": 0.6618644067796611,
+              "energy_cost_cny_mean": 470.2515254387655,
+              "peak_power_kw_mean": 59.99999495182473,
+              "mean_delivery_ratio_mean": 0.9613154515521989,
+              "worst_delivery_ratio_mean": 0.7690415526574851,
+              "constraint_violations_max": 0,
+              "spread": 0.476271186440678
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.673469387755102,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343200131705082,
+              "session_completion_rate_mean": 0.37272727272727274,
+              "energy_cost_cny_mean": 480.65926837536256,
+              "peak_power_kw_mean": 59.99988919724335,
+              "mean_delivery_ratio_mean": 0.8193230264680725,
+              "worst_delivery_ratio_mean": 0.1938866337986384,
+              "constraint_violations_max": 0,
+              "spread": 0.054545454545454564
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8337031043213683,
+              "session_completion_rate_mean": 0.48636363636363633,
+              "energy_cost_cny_mean": 480.39576144875525,
+              "peak_power_kw_mean": 59.99998792470245,
+              "mean_delivery_ratio_mean": 0.8612609943810005,
+              "worst_delivery_ratio_mean": 0.34949533686034456,
+              "constraint_violations_max": 0,
+              "spread": 0.027272727272727282
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343198410482829,
+              "session_completion_rate_mean": 0.25606060606060604,
+              "energy_cost_cny_mean": 480.6591430900848,
+              "peak_power_kw_mean": 59.99977517987565,
+              "mean_delivery_ratio_mean": 0.8345729141023892,
+              "worst_delivery_ratio_mean": 0.5499742668295846,
+              "constraint_violations_max": 0,
+              "spread": 0.2212121212121212
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.7959183673469388,
+          "port_constrained": false,
+          "sessions_dropped": 10,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7935903055147645,
+              "session_completion_rate_mean": 0.3764705882352941,
+              "energy_cost_cny_mean": 476.1528400230175,
+              "peak_power_kw_mean": 59.99988036320911,
+              "mean_delivery_ratio_mean": 0.7739437462697962,
+              "worst_delivery_ratio_mean": 0.16629774060568145,
+              "constraint_violations_max": 0,
+              "spread": 0.047058823529411764
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7966875769410682,
+              "session_completion_rate_mean": 0.4749019607843137,
+              "energy_cost_cny_mean": 477.565927762432,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 0.8286583309310386,
+              "worst_delivery_ratio_mean": 0.38861663526356915,
+              "constraint_violations_max": 0,
+              "spread": 0.06980392156862741
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7976760138889591,
+              "session_completion_rate_mean": 0.1476470588235294,
+              "energy_cost_cny_mean": 478.0138970924545,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.7980882104774214,
+              "worst_delivery_ratio_mean": 0.540199303122687,
+              "constraint_violations_max": 0,
+              "spread": 0.17529411764705882
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.25210084033613445,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974547154227339,
+              "session_completion_rate_mean": 0.9833333333333334,
+              "energy_cost_cny_mean": 270.06395472923543,
+              "peak_power_kw_mean": 59.99928718589224,
+              "mean_delivery_ratio_mean": 0.9970392971413713,
+              "worst_delivery_ratio_mean": 0.8927143877096095,
+              "constraint_violations_max": 0,
+              "spread": 0.033333333333333326
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974279753276355,
+              "session_completion_rate_mean": 0.975,
+              "energy_cost_cny_mean": 270.0052826275229,
+              "peak_power_kw_mean": 59.99925824844473,
+              "mean_delivery_ratio_mean": 0.997731289413734,
+              "worst_delivery_ratio_mean": 0.9403284533591985,
+              "constraint_violations_max": 0,
+              "spread": 0.050000000000000044
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 270.9773781152604,
+              "peak_power_kw_mean": 59.99931816632508,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.35294117647058826,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9736776467328875,
+              "session_completion_rate_mean": 0.875,
+              "energy_cost_cny_mean": 373.61447874379905,
+              "peak_power_kw_mean": 59.99960382663932,
+              "mean_delivery_ratio_mean": 0.9707721475840416,
+              "worst_delivery_ratio_mean": 0.5977437145905125,
+              "constraint_violations_max": 0,
+              "spread": 0.1499999999999999
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9719654410357395,
+              "session_completion_rate_mean": 0.9,
+              "energy_cost_cny_mean": 372.8653429963621,
+              "peak_power_kw_mean": 59.999490018464954,
+              "mean_delivery_ratio_mean": 0.9751343207604979,
+              "worst_delivery_ratio_mean": 0.6698884424786182,
+              "constraint_violations_max": 0,
+              "spread": 0.1333333333333333
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9791575617314423,
+              "session_completion_rate_mean": 0.8583333333333334,
+              "energy_cost_cny_mean": 376.397335720778,
+              "peak_power_kw_mean": 59.99959914177161,
+              "mean_delivery_ratio_mean": 0.978853814071515,
+              "worst_delivery_ratio_mean": 0.8717345292593912,
+              "constraint_violations_max": 0,
+              "spread": 0.2833333333333333
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.453781512605042,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9165439505423367,
+              "session_completion_rate_mean": 0.6416666666666667,
+              "energy_cost_cny_mean": 450.9842305207936,
+              "peak_power_kw_mean": 59.99969331225236,
+              "mean_delivery_ratio_mean": 0.9086725998840594,
+              "worst_delivery_ratio_mean": 0.372671267371689,
+              "constraint_violations_max": 0,
+              "spread": 0.25
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9153536623233012,
+              "session_completion_rate_mean": 0.6916666666666667,
+              "energy_cost_cny_mean": 450.4672754226207,
+              "peak_power_kw_mean": 59.99972631493689,
+              "mean_delivery_ratio_mean": 0.9257527470351299,
+              "worst_delivery_ratio_mean": 0.4849300614244565,
+              "constraint_violations_max": 0,
+              "spread": 0.21666666666666667
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9278366776788258,
+              "session_completion_rate_mean": 0.44166666666666665,
+              "energy_cost_cny_mean": 455.8925032682966,
+              "peak_power_kw_mean": 59.999846151011624,
+              "mean_delivery_ratio_mean": 0.9263821668334024,
+              "worst_delivery_ratio_mean": 0.7007151204581512,
+              "constraint_violations_max": 0,
+              "spread": 0.3833333333333333
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.5546218487394958,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.799341272099598,
+              "session_completion_rate_mean": 0.3019774011299435,
+              "energy_cost_cny_mean": 475.9412946529743,
+              "peak_power_kw_mean": 59.999895689485854,
+              "mean_delivery_ratio_mean": 0.7834258938494729,
+              "worst_delivery_ratio_mean": 0.039486795412367805,
+              "constraint_violations_max": 0,
+              "spread": 0.1293785310734463
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7979965451325269,
+              "session_completion_rate_mean": 0.4279661016949152,
+              "energy_cost_cny_mean": 475.33566422935377,
+              "peak_power_kw_mean": 59.9998061821506,
+              "mean_delivery_ratio_mean": 0.8263191418552451,
+              "worst_delivery_ratio_mean": 0.3474505431677526,
+              "constraint_violations_max": 0,
+              "spread": 0.1440677966101695
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7994234163754604,
+              "session_completion_rate_mean": 0.10847457627118645,
+              "energy_cost_cny_mean": 475.99773547878044,
+              "peak_power_kw_mean": 59.99942075943027,
+              "mean_delivery_ratio_mean": 0.796112398147374,
+              "worst_delivery_ratio_mean": 0.48009968347781873,
+              "constraint_violations_max": 0,
+              "spread": 0.18305084745762712
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.6554621848739496,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530729940046,
+              "session_completion_rate_mean": 0.2148809523809524,
+              "energy_cost_cny_mean": 479.9971622350266,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.6839693687659065,
+              "worst_delivery_ratio_mean": 0.0,
+              "constraint_violations_max": 0,
+              "spread": 0.03690476190476191
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996532671047228,
+              "session_completion_rate_mean": 0.31845238095238093,
+              "energy_cost_cny_mean": 479.99732737868635,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.7391884484783364,
+              "worst_delivery_ratio_mean": 0.2653702958186414,
+              "constraint_violations_max": 0,
+              "spread": 0.029761904761904767
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530268553007,
+              "session_completion_rate_mean": 0.058333333333333334,
+              "energy_cost_cny_mean": 479.9971407455508,
+              "peak_power_kw_mean": 59.99946839683855,
+              "mean_delivery_ratio_mean": 0.6956761931864497,
+              "worst_delivery_ratio_mean": 0.32245636277309825,
+              "constraint_violations_max": 0,
+              "spread": 0.11666666666666667
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        }
+      ],
+      "run_ids": [
+        "campus_baseline_v1_L0p5_T0p4--EDF--81e1af03ae",
+        "campus_baseline_v1_L0p5_T0p4--EDF--ab78190758",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--4527566c71",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--5db209658a",
+        "campus_baseline_v1_L0p5_T0p4--LLF--68d5e11948",
+        "campus_baseline_v1_L0p5_T0p4--LLF--8f56d68733",
+        "campus_baseline_v1_L0p5_T0p55--EDF--1639868581",
+        "campus_baseline_v1_L0p5_T0p55--EDF--d5646e2c38",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--604c811589",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--eb65ab779c",
+        "campus_baseline_v1_L0p5_T0p55--LLF--21febbcff3",
+        "campus_baseline_v1_L0p5_T0p55--LLF--4c2a4ef86b",
+        "campus_baseline_v1_L0p5_T0p7--EDF--2e3a64bc0d",
+        "campus_baseline_v1_L0p5_T0p7--EDF--5e521e5cd3",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--403516eca4",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--c34e9c24d4",
+        "campus_baseline_v1_L0p5_T0p7--LLF--5a3e1a25f0",
+        "campus_baseline_v1_L0p5_T0p7--LLF--d94b46d084",
+        "campus_baseline_v1_L0p5_T0p85--EDF--1013124350",
+        "campus_baseline_v1_L0p5_T0p85--EDF--398dd1b25d",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--0eca736cd5",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--eb3e6941d9",
+        "campus_baseline_v1_L0p5_T0p85--LLF--0a255bc265",
+        "campus_baseline_v1_L0p5_T0p85--LLF--1458eb42a3",
+        "campus_baseline_v1_L0p7_T0p4--EDF--6e61406b65",
+        "campus_baseline_v1_L0p7_T0p4--EDF--afc27f0491",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--eda7025eb3",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--fa09ed18e3",
+        "campus_baseline_v1_L0p7_T0p4--LLF--29b0c05383",
+        "campus_baseline_v1_L0p7_T0p4--LLF--524208c428",
+        "campus_baseline_v1_L0p7_T0p55--EDF--764f7b3aeb",
+        "campus_baseline_v1_L0p7_T0p55--EDF--f00efb42bc",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--506c8ccf74",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--8511e2fe23",
+        "campus_baseline_v1_L0p7_T0p55--LLF--9e53443088",
+        "campus_baseline_v1_L0p7_T0p55--LLF--deedde757d",
+        "campus_baseline_v1_L0p7_T0p7--EDF--2ebdebe1d5",
+        "campus_baseline_v1_L0p7_T0p7--EDF--969ee73dac",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--2fcf7c5860",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--43162de594",
+        "campus_baseline_v1_L0p7_T0p7--LLF--c1a6b925f7",
+        "campus_baseline_v1_L0p7_T0p7--LLF--e70256fc51",
+        "campus_baseline_v1_L0p7_T0p85--EDF--e1a8719420",
+        "campus_baseline_v1_L0p7_T0p85--EDF--fcaed558be",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ad6098910a",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ee2e55b5ea",
+        "campus_baseline_v1_L0p7_T0p85--LLF--2e6112a942",
+        "campus_baseline_v1_L0p7_T0p85--LLF--e1d1415bf5",
+        "campus_baseline_v1_L0p9_T0p4--EDF--95eca1022f",
+        "campus_baseline_v1_L0p9_T0p4--EDF--9b6f539274",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--8677c909cf",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--d2a948eb5d",
+        "campus_baseline_v1_L0p9_T0p4--LLF--d682ef2145",
+        "campus_baseline_v1_L0p9_T0p4--LLF--ed88324788",
+        "campus_baseline_v1_L0p9_T0p55--EDF--05258f7f9b",
+        "campus_baseline_v1_L0p9_T0p55--EDF--f298c7d62b",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--470702d744",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--bcb4e25b15",
+        "campus_baseline_v1_L0p9_T0p55--LLF--0e5837f15e",
+        "campus_baseline_v1_L0p9_T0p55--LLF--6935c14a9a",
+        "campus_baseline_v1_L0p9_T0p7--EDF--4a8a88530f",
+        "campus_baseline_v1_L0p9_T0p7--EDF--d8bc05d85e",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--0da78690f2",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--2378d51205",
+        "campus_baseline_v1_L0p9_T0p7--LLF--5352ea4c74",
+        "campus_baseline_v1_L0p9_T0p7--LLF--cf40aa4bb4",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7647220f67",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7a830e448a",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--9e654e399e",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--d7ec116ccc",
+        "campus_baseline_v1_L0p9_T0p85--LLF--380a35217b",
+        "campus_baseline_v1_L0p9_T0p85--LLF--e8bd22612b",
+        "campus_baseline_v1_L1p1_T0p4--EDF--1ce1b5e5c3",
+        "campus_baseline_v1_L1p1_T0p4--EDF--e60436cff0",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--98eef770bd",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--bf89379598",
+        "campus_baseline_v1_L1p1_T0p4--LLF--339692e2e1",
+        "campus_baseline_v1_L1p1_T0p4--LLF--3a55777840",
+        "campus_baseline_v1_L1p1_T0p55--EDF--77bfd92b5e",
+        "campus_baseline_v1_L1p1_T0p55--EDF--8bd29893d1",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6ad1d375a6",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6bc30b78ab",
+        "campus_baseline_v1_L1p1_T0p55--LLF--2f64003fa9",
+        "campus_baseline_v1_L1p1_T0p55--LLF--86bebab597",
+        "campus_baseline_v1_L1p1_T0p7--EDF--3f731e9db5",
+        "campus_baseline_v1_L1p1_T0p7--EDF--e8f77682c7",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--d7ce607f12",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--f9d8ee1074",
+        "campus_baseline_v1_L1p1_T0p7--LLF--8d77879ec0",
+        "campus_baseline_v1_L1p1_T0p7--LLF--b353dad9cb",
+        "campus_baseline_v1_L1p1_T0p85--EDF--44c6b4b547",
+        "campus_baseline_v1_L1p1_T0p85--EDF--e6683269de",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--5face0d55c",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--8d7d00f0f6",
+        "campus_baseline_v1_L1p1_T0p85--LLF--5ab71f04d2",
+        "campus_baseline_v1_L1p1_T0p85--LLF--694f9bed06",
+        "campus_baseline_v1_L1p3_T0p4--EDF--27dd283f8f",
+        "campus_baseline_v1_L1p3_T0p4--EDF--a896108c04",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--1a255220d6",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--72d7343bd3",
+        "campus_baseline_v1_L1p3_T0p4--LLF--620237836b",
+        "campus_baseline_v1_L1p3_T0p4--LLF--dd4e58f55c",
+        "campus_baseline_v1_L1p3_T0p55--EDF--16fefd8ec7",
+        "campus_baseline_v1_L1p3_T0p55--EDF--3036fb4750",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--4966470106",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--e45f1d82e1",
+        "campus_baseline_v1_L1p3_T0p55--LLF--880e0ad5f8",
+        "campus_baseline_v1_L1p3_T0p55--LLF--e60d1774d9",
+        "campus_baseline_v1_L1p3_T0p7--EDF--7a21293448",
+        "campus_baseline_v1_L1p3_T0p7--EDF--e449e372f6",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--4da4060d42",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--e31e69ea28",
+        "campus_baseline_v1_L1p3_T0p7--LLF--39536d1a39",
+        "campus_baseline_v1_L1p3_T0p7--LLF--fbd18308a1",
+        "campus_baseline_v1_L1p3_T0p85--EDF--2d6ba0d9f5",
+        "campus_baseline_v1_L1p3_T0p85--EDF--8b57c83511",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--4eb325a63a",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--d8093e8478",
+        "campus_baseline_v1_L1p3_T0p85--LLF--3be9f99d8d",
+        "campus_baseline_v1_L1p3_T0p85--LLF--f87d8897e6"
+      ]
+    },
+    "energy_cost_cny": {
+      "sweep_id": "sweep--48bcc3db38",
+      "schema_version": "1.0",
+      "created_at": "2026-10-09T01:38:57.870311",
+      "base_scenario_id": "campus_baseline_v1",
+      "x_name": "load_intensity",
+      "x_values": [
+        0.5,
+        0.7,
+        0.9,
+        1.1,
+        1.3
+      ],
+      "y_name": "deadline_tightness",
+      "y_values": [
+        0.4,
+        0.55,
+        0.7,
+        0.85
+      ],
+      "algorithms": [
+        "FCFS",
+        "EDF",
+        "LLF"
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "primary_metric": "energy_cost_cny",
+      "metric_direction": "min",
+      "score_rule": "1) 硬约束优先：任何种子下 constraint_violations > 0 的算法在该格点取消资格（方案 §5 原则 3，不允许把违规供电当成更优结果）；2) 主目标：energy_cost_cny 的跨种子均值，方向为越小越好；3) 均值相同时，取跨种子波动（spread）更小者 —— 均值相同但波动大的算法不可信；4) 仍相同则按算法名升序取首个，保证确定性。越限判定采用相对容差 max(1e-3 A, 限值×1e-4)，用于吸收调度器二分搜索的浮点残差，详见 metrics.violation_threshold_a。",
+      "cells": [
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.5357142857142857,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.81925455876285,
+              "peak_power_kw_mean": 59.999453704234895,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.8729694630338,
+              "peak_power_kw_mean": 59.999511196475034,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 277.75211904107505,
+              "peak_power_kw_mean": 59.99956008563048,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.75,
+          "port_constrained": false,
+          "sessions_dropped": 6,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.51817994916496,
+              "peak_power_kw_mean": 59.99988808090709,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.2583914760073,
+              "peak_power_kw_mean": 59.99988307118995,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999998,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 363.1411714784191,
+              "peak_power_kw_mean": 59.999877316950325,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 0.9642857142857143,
+          "port_constrained": false,
+          "sessions_dropped": 16,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.9346478688004,
+              "peak_power_kw_mean": 59.99989677498614,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.0764522791874,
+              "peak_power_kw_mean": 59.999993400763955,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.96123897113995,
+              "peak_power_kw_mean": 59.999976279933634,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.1785714285714286,
+          "port_constrained": true,
+          "sessions_dropped": 25,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 379.43862302386975,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.0492204503752,
+              "peak_power_kw_mean": 59.999918482072104,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 378.64585527276176,
+              "peak_power_kw_mean": 59.99986680496298,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.4,
+          "port_occupancy_estimate": 1.3928571428571428,
+          "port_constrained": true,
+          "sessions_dropped": 30,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9973458939414221,
+              "session_completion_rate_mean": 0.9821428571428572,
+              "energy_cost_cny_mean": 360.2612074623864,
+              "peak_power_kw_mean": 59.99995958489903,
+              "mean_delivery_ratio_mean": 0.9967345114749089,
+              "worst_delivery_ratio_mean": 0.9085648460055677,
+              "constraint_violations_max": 0,
+              "spread": 0.0357142857142857
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.4150129328657,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 360.81759268546983,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.38961038961038963,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05035963908693,
+              "peak_power_kw_mean": 59.99923783387605,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 275.05037235922026,
+              "peak_power_kw_mean": 59.99930682889707,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.5454545454545454,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9983393151507608,
+              "session_completion_rate_mean": 0.9915254237288136,
+              "energy_cost_cny_mean": 389.5062612243433,
+              "peak_power_kw_mean": 59.99992294967035,
+              "mean_delivery_ratio_mean": 0.9973340000791449,
+              "worst_delivery_ratio_mean": 0.8427060046695474,
+              "constraint_violations_max": 0,
+              "spread": 0.016949152542372836
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.1850324827657,
+              "peak_power_kw_mean": 59.99991955911051,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999999999999999,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 390.20980866250625,
+              "peak_power_kw_mean": 59.999925011795185,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.7012987012987013,
+          "port_constrained": false,
+          "sessions_dropped": 4,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9889559465450033,
+              "session_completion_rate_mean": 0.9099616858237547,
+              "energy_cost_cny_mean": 461.0665690836209,
+              "peak_power_kw_mean": 59.999929333930595,
+              "mean_delivery_ratio_mean": 0.9862549860894836,
+              "worst_delivery_ratio_mean": 0.7776960848314091,
+              "constraint_violations_max": 0,
+              "spread": 0.04214559386973182
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9896698556212009,
+              "session_completion_rate_mean": 0.9179438058748404,
+              "energy_cost_cny_mean": 461.224912950428,
+              "peak_power_kw_mean": 59.999975008403815,
+              "mean_delivery_ratio_mean": 0.9931825348242136,
+              "worst_delivery_ratio_mean": 0.8065379714337659,
+              "constraint_violations_max": 0,
+              "spread": 0.09514687100894004
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0000000000000002,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 464.85636176528874,
+              "peak_power_kw_mean": 59.999998265554474,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 0.8571428571428571,
+          "port_constrained": false,
+          "sessions_dropped": 12,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9506714590719862,
+              "session_completion_rate_mean": 0.7306547619047619,
+              "energy_cost_cny_mean": 465.5375496602371,
+              "peak_power_kw_mean": 59.99989840406931,
+              "mean_delivery_ratio_mean": 0.9427137799458373,
+              "worst_delivery_ratio_mean": 0.3943476931675507,
+              "constraint_violations_max": 0,
+              "spread": 0.25297619047619047
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9601575795235079,
+              "session_completion_rate_mean": 0.8343962585034014,
+              "energy_cost_cny_mean": 469.0253677255101,
+              "peak_power_kw_mean": 59.999947874383864,
+              "mean_delivery_ratio_mean": 0.9715795556661699,
+              "worst_delivery_ratio_mean": 0.6282284180069235,
+              "constraint_violations_max": 0,
+              "spread": 0.12712585034013602
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9758482952040657,
+              "session_completion_rate_mean": 0.7291666666666666,
+              "energy_cost_cny_mean": 474.71970924739435,
+              "peak_power_kw_mean": 59.99986031272047,
+              "mean_delivery_ratio_mean": 0.976136439351233,
+              "worst_delivery_ratio_mean": 0.893407726379212,
+              "constraint_violations_max": 0,
+              "spread": 0.5416666666666667
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.55,
+          "port_occupancy_estimate": 1.0129870129870129,
+          "port_constrained": true,
+          "sessions_dropped": 17,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9304728533674305,
+              "session_completion_rate_mean": 0.6845238095238095,
+              "energy_cost_cny_mean": 472.0253836731925,
+              "peak_power_kw_mean": 59.99990768852233,
+              "mean_delivery_ratio_mean": 0.9128158812704108,
+              "worst_delivery_ratio_mean": 0.11391046345462055,
+              "constraint_violations_max": 0,
+              "spread": 0.13095238095238093
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9386278748178009,
+              "session_completion_rate_mean": 0.7905844155844155,
+              "energy_cost_cny_mean": 475.0876707444516,
+              "peak_power_kw_mean": 59.99994970488501,
+              "mean_delivery_ratio_mean": 0.9511507849062452,
+              "worst_delivery_ratio_mean": 0.6160904984858369,
+              "constraint_violations_max": 0,
+              "spread": 0.009740259740259716
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.942692245447605,
+              "session_completion_rate_mean": 0.42640692640692646,
+              "energy_cost_cny_mean": 476.64295394863757,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.9423833399968752,
+              "worst_delivery_ratio_mean": 0.7733802857392897,
+              "constraint_violations_max": 0,
+              "spread": 0.329004329004329
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.30612244897959184,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99914857499654,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9999380686314048,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.1241568667897,
+              "peak_power_kw_mean": 59.99944242787461,
+              "mean_delivery_ratio_mean": 0.9999508401888221,
+              "worst_delivery_ratio_mean": 0.9970504113293268,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 272.19908520881074,
+              "peak_power_kw_mean": 59.99923117058697,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.42857142857142855,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9910321137427902,
+              "session_completion_rate_mean": 0.95,
+              "energy_cost_cny_mean": 384.13845859266996,
+              "peak_power_kw_mean": 59.999493169342884,
+              "mean_delivery_ratio_mean": 0.9880044340884366,
+              "worst_delivery_ratio_mean": 0.8136684730018486,
+              "constraint_violations_max": 0,
+              "spread": 0.09999999999999998
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9909957863397338,
+              "session_completion_rate_mean": 0.9416666666666667,
+              "energy_cost_cny_mean": 384.0550852444412,
+              "peak_power_kw_mean": 59.99973448212415,
+              "mean_delivery_ratio_mean": 0.9926495894657072,
+              "worst_delivery_ratio_mean": 0.8459757470241087,
+              "constraint_violations_max": 0,
+              "spread": 0.08333333333333326
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.997024164780862,
+              "session_completion_rate_mean": 0.925,
+              "energy_cost_cny_mean": 387.54693459299943,
+              "peak_power_kw_mean": 59.999797658859045,
+              "mean_delivery_ratio_mean": 0.9969863155829644,
+              "worst_delivery_ratio_mean": 0.9622083932167381,
+              "constraint_violations_max": 0,
+              "spread": 0.15000000000000002
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.5510204081632653,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.946831341169464,
+              "session_completion_rate_mean": 0.7050847457627119,
+              "energy_cost_cny_mean": 464.0099700863391,
+              "peak_power_kw_mean": 59.99999826555447,
+              "mean_delivery_ratio_mean": 0.9359532172608513,
+              "worst_delivery_ratio_mean": 0.36110315049415265,
+              "constraint_violations_max": 0,
+              "spread": 0.18983050847457628
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9436738151447006,
+              "session_completion_rate_mean": 0.7807909604519774,
+              "energy_cost_cny_mean": 462.59172787291084,
+              "peak_power_kw_mean": 59.99995256747389,
+              "mean_delivery_ratio_mean": 0.9533970792805444,
+              "worst_delivery_ratio_mean": 0.6221755958478417,
+              "constraint_violations_max": 0,
+              "spread": 0.17175141242937852
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9632805054630943,
+              "session_completion_rate_mean": 0.6618644067796611,
+              "energy_cost_cny_mean": 470.2515254387655,
+              "peak_power_kw_mean": 59.99999495182473,
+              "mean_delivery_ratio_mean": 0.9613154515521989,
+              "worst_delivery_ratio_mean": 0.7690415526574851,
+              "constraint_violations_max": 0,
+              "spread": 0.476271186440678
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.673469387755102,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343200131705082,
+              "session_completion_rate_mean": 0.37272727272727274,
+              "energy_cost_cny_mean": 480.65926837536256,
+              "peak_power_kw_mean": 59.99988919724335,
+              "mean_delivery_ratio_mean": 0.8193230264680725,
+              "worst_delivery_ratio_mean": 0.1938866337986384,
+              "constraint_violations_max": 0,
+              "spread": 0.054545454545454564
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8337031043213683,
+              "session_completion_rate_mean": 0.48636363636363633,
+              "energy_cost_cny_mean": 480.39576144875525,
+              "peak_power_kw_mean": 59.99998792470245,
+              "mean_delivery_ratio_mean": 0.8612609943810005,
+              "worst_delivery_ratio_mean": 0.34949533686034456,
+              "constraint_violations_max": 0,
+              "spread": 0.027272727272727282
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.8343198410482829,
+              "session_completion_rate_mean": 0.25606060606060604,
+              "energy_cost_cny_mean": 480.6591430900848,
+              "peak_power_kw_mean": 59.99977517987565,
+              "mean_delivery_ratio_mean": 0.8345729141023892,
+              "worst_delivery_ratio_mean": 0.5499742668295846,
+              "constraint_violations_max": 0,
+              "spread": 0.2212121212121212
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.7,
+          "port_occupancy_estimate": 0.7959183673469388,
+          "port_constrained": false,
+          "sessions_dropped": 10,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7935903055147645,
+              "session_completion_rate_mean": 0.3764705882352941,
+              "energy_cost_cny_mean": 476.1528400230175,
+              "peak_power_kw_mean": 59.99988036320911,
+              "mean_delivery_ratio_mean": 0.7739437462697962,
+              "worst_delivery_ratio_mean": 0.16629774060568145,
+              "constraint_violations_max": 0,
+              "spread": 0.047058823529411764
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7966875769410682,
+              "session_completion_rate_mean": 0.4749019607843137,
+              "energy_cost_cny_mean": 477.565927762432,
+              "peak_power_kw_mean": 59.999947871926125,
+              "mean_delivery_ratio_mean": 0.8286583309310386,
+              "worst_delivery_ratio_mean": 0.38861663526356915,
+              "constraint_violations_max": 0,
+              "spread": 0.06980392156862741
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7976760138889591,
+              "session_completion_rate_mean": 0.1476470588235294,
+              "energy_cost_cny_mean": 478.0138970924545,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.7980882104774214,
+              "worst_delivery_ratio_mean": 0.540199303122687,
+              "constraint_violations_max": 0,
+              "spread": 0.17529411764705882
+            }
+          },
+          "winner": "FCFS",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.5,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.25210084033613445,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974547154227339,
+              "session_completion_rate_mean": 0.9833333333333334,
+              "energy_cost_cny_mean": 270.06395472923543,
+              "peak_power_kw_mean": 59.99928718589224,
+              "mean_delivery_ratio_mean": 0.9970392971413713,
+              "worst_delivery_ratio_mean": 0.8927143877096095,
+              "constraint_violations_max": 0,
+              "spread": 0.033333333333333326
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9974279753276355,
+              "session_completion_rate_mean": 0.975,
+              "energy_cost_cny_mean": 270.0052826275229,
+              "peak_power_kw_mean": 59.99925824844473,
+              "mean_delivery_ratio_mean": 0.997731289413734,
+              "worst_delivery_ratio_mean": 0.9403284533591985,
+              "constraint_violations_max": 0,
+              "spread": 0.050000000000000044
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 1.0,
+              "session_completion_rate_mean": 1.0,
+              "energy_cost_cny_mean": 270.9773781152604,
+              "peak_power_kw_mean": 59.99931816632508,
+              "mean_delivery_ratio_mean": 1.0,
+              "worst_delivery_ratio_mean": 1.0,
+              "constraint_violations_max": 0,
+              "spread": 0.0
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.7,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.35294117647058826,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9736776467328875,
+              "session_completion_rate_mean": 0.875,
+              "energy_cost_cny_mean": 373.61447874379905,
+              "peak_power_kw_mean": 59.99960382663932,
+              "mean_delivery_ratio_mean": 0.9707721475840416,
+              "worst_delivery_ratio_mean": 0.5977437145905125,
+              "constraint_violations_max": 0,
+              "spread": 0.1499999999999999
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9719654410357395,
+              "session_completion_rate_mean": 0.9,
+              "energy_cost_cny_mean": 372.8653429963621,
+              "peak_power_kw_mean": 59.999490018464954,
+              "mean_delivery_ratio_mean": 0.9751343207604979,
+              "worst_delivery_ratio_mean": 0.6698884424786182,
+              "constraint_violations_max": 0,
+              "spread": 0.1333333333333333
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9791575617314423,
+              "session_completion_rate_mean": 0.8583333333333334,
+              "energy_cost_cny_mean": 376.397335720778,
+              "peak_power_kw_mean": 59.99959914177161,
+              "mean_delivery_ratio_mean": 0.978853814071515,
+              "worst_delivery_ratio_mean": 0.8717345292593912,
+              "constraint_violations_max": 0,
+              "spread": 0.2833333333333333
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 0.9,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.453781512605042,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9165439505423367,
+              "session_completion_rate_mean": 0.6416666666666667,
+              "energy_cost_cny_mean": 450.9842305207936,
+              "peak_power_kw_mean": 59.99969331225236,
+              "mean_delivery_ratio_mean": 0.9086725998840594,
+              "worst_delivery_ratio_mean": 0.372671267371689,
+              "constraint_violations_max": 0,
+              "spread": 0.25
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9153536623233012,
+              "session_completion_rate_mean": 0.6916666666666667,
+              "energy_cost_cny_mean": 450.4672754226207,
+              "peak_power_kw_mean": 59.99972631493689,
+              "mean_delivery_ratio_mean": 0.9257527470351299,
+              "worst_delivery_ratio_mean": 0.4849300614244565,
+              "constraint_violations_max": 0,
+              "spread": 0.21666666666666667
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.9278366776788258,
+              "session_completion_rate_mean": 0.44166666666666665,
+              "energy_cost_cny_mean": 455.8925032682966,
+              "peak_power_kw_mean": 59.999846151011624,
+              "mean_delivery_ratio_mean": 0.9263821668334024,
+              "worst_delivery_ratio_mean": 0.7007151204581512,
+              "constraint_violations_max": 0,
+              "spread": 0.3833333333333333
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.1,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.5546218487394958,
+          "port_constrained": false,
+          "sessions_dropped": 0,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.799341272099598,
+              "session_completion_rate_mean": 0.3019774011299435,
+              "energy_cost_cny_mean": 475.9412946529743,
+              "peak_power_kw_mean": 59.999895689485854,
+              "mean_delivery_ratio_mean": 0.7834258938494729,
+              "worst_delivery_ratio_mean": 0.039486795412367805,
+              "constraint_violations_max": 0,
+              "spread": 0.1293785310734463
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7979965451325269,
+              "session_completion_rate_mean": 0.4279661016949152,
+              "energy_cost_cny_mean": 475.33566422935377,
+              "peak_power_kw_mean": 59.9998061821506,
+              "mean_delivery_ratio_mean": 0.8263191418552451,
+              "worst_delivery_ratio_mean": 0.3474505431677526,
+              "constraint_violations_max": 0,
+              "spread": 0.1440677966101695
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.7994234163754604,
+              "session_completion_rate_mean": 0.10847457627118645,
+              "energy_cost_cny_mean": 475.99773547878044,
+              "peak_power_kw_mean": 59.99942075943027,
+              "mean_delivery_ratio_mean": 0.796112398147374,
+              "worst_delivery_ratio_mean": 0.48009968347781873,
+              "constraint_violations_max": 0,
+              "spread": 0.18305084745762712
+            }
+          },
+          "winner": "EDF",
+          "disqualified": []
+        },
+        {
+          "load_intensity": 1.3,
+          "deadline_tightness": 0.85,
+          "port_occupancy_estimate": 0.6554621848739496,
+          "port_constrained": false,
+          "sessions_dropped": 2,
+          "aggregates": {
+            "FCFS": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530729940046,
+              "session_completion_rate_mean": 0.2148809523809524,
+              "energy_cost_cny_mean": 479.9971622350266,
+              "peak_power_kw_mean": 59.99979469793455,
+              "mean_delivery_ratio_mean": 0.6839693687659065,
+              "worst_delivery_ratio_mean": 0.0,
+              "constraint_violations_max": 0,
+              "spread": 0.03690476190476191
+            },
+            "EDF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996532671047228,
+              "session_completion_rate_mean": 0.31845238095238093,
+              "energy_cost_cny_mean": 479.99732737868635,
+              "peak_power_kw_mean": 59.9998803632091,
+              "mean_delivery_ratio_mean": 0.7391884484783364,
+              "worst_delivery_ratio_mean": 0.2653702958186414,
+              "constraint_violations_max": 0,
+              "spread": 0.029761904761904767
+            },
+            "LLF": {
+              "n_seeds": 2,
+              "demand_satisfaction_rate_mean": 0.6996530268553007,
+              "session_completion_rate_mean": 0.058333333333333334,
+              "energy_cost_cny_mean": 479.9971407455508,
+              "peak_power_kw_mean": 59.99946839683855,
+              "mean_delivery_ratio_mean": 0.6956761931864497,
+              "worst_delivery_ratio_mean": 0.32245636277309825,
+              "constraint_violations_max": 0,
+              "spread": 0.11666666666666667
+            }
+          },
+          "winner": "LLF",
+          "disqualified": []
+        }
+      ],
+      "run_ids": [
+        "campus_baseline_v1_L0p5_T0p4--EDF--81e1af03ae",
+        "campus_baseline_v1_L0p5_T0p4--EDF--ab78190758",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--4527566c71",
+        "campus_baseline_v1_L0p5_T0p4--FCFS--5db209658a",
+        "campus_baseline_v1_L0p5_T0p4--LLF--68d5e11948",
+        "campus_baseline_v1_L0p5_T0p4--LLF--8f56d68733",
+        "campus_baseline_v1_L0p5_T0p55--EDF--1639868581",
+        "campus_baseline_v1_L0p5_T0p55--EDF--d5646e2c38",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--604c811589",
+        "campus_baseline_v1_L0p5_T0p55--FCFS--eb65ab779c",
+        "campus_baseline_v1_L0p5_T0p55--LLF--21febbcff3",
+        "campus_baseline_v1_L0p5_T0p55--LLF--4c2a4ef86b",
+        "campus_baseline_v1_L0p5_T0p7--EDF--2e3a64bc0d",
+        "campus_baseline_v1_L0p5_T0p7--EDF--5e521e5cd3",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--403516eca4",
+        "campus_baseline_v1_L0p5_T0p7--FCFS--c34e9c24d4",
+        "campus_baseline_v1_L0p5_T0p7--LLF--5a3e1a25f0",
+        "campus_baseline_v1_L0p5_T0p7--LLF--d94b46d084",
+        "campus_baseline_v1_L0p5_T0p85--EDF--1013124350",
+        "campus_baseline_v1_L0p5_T0p85--EDF--398dd1b25d",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--0eca736cd5",
+        "campus_baseline_v1_L0p5_T0p85--FCFS--eb3e6941d9",
+        "campus_baseline_v1_L0p5_T0p85--LLF--0a255bc265",
+        "campus_baseline_v1_L0p5_T0p85--LLF--1458eb42a3",
+        "campus_baseline_v1_L0p7_T0p4--EDF--6e61406b65",
+        "campus_baseline_v1_L0p7_T0p4--EDF--afc27f0491",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--eda7025eb3",
+        "campus_baseline_v1_L0p7_T0p4--FCFS--fa09ed18e3",
+        "campus_baseline_v1_L0p7_T0p4--LLF--29b0c05383",
+        "campus_baseline_v1_L0p7_T0p4--LLF--524208c428",
+        "campus_baseline_v1_L0p7_T0p55--EDF--764f7b3aeb",
+        "campus_baseline_v1_L0p7_T0p55--EDF--f00efb42bc",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--506c8ccf74",
+        "campus_baseline_v1_L0p7_T0p55--FCFS--8511e2fe23",
+        "campus_baseline_v1_L0p7_T0p55--LLF--9e53443088",
+        "campus_baseline_v1_L0p7_T0p55--LLF--deedde757d",
+        "campus_baseline_v1_L0p7_T0p7--EDF--2ebdebe1d5",
+        "campus_baseline_v1_L0p7_T0p7--EDF--969ee73dac",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--2fcf7c5860",
+        "campus_baseline_v1_L0p7_T0p7--FCFS--43162de594",
+        "campus_baseline_v1_L0p7_T0p7--LLF--c1a6b925f7",
+        "campus_baseline_v1_L0p7_T0p7--LLF--e70256fc51",
+        "campus_baseline_v1_L0p7_T0p85--EDF--e1a8719420",
+        "campus_baseline_v1_L0p7_T0p85--EDF--fcaed558be",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ad6098910a",
+        "campus_baseline_v1_L0p7_T0p85--FCFS--ee2e55b5ea",
+        "campus_baseline_v1_L0p7_T0p85--LLF--2e6112a942",
+        "campus_baseline_v1_L0p7_T0p85--LLF--e1d1415bf5",
+        "campus_baseline_v1_L0p9_T0p4--EDF--95eca1022f",
+        "campus_baseline_v1_L0p9_T0p4--EDF--9b6f539274",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--8677c909cf",
+        "campus_baseline_v1_L0p9_T0p4--FCFS--d2a948eb5d",
+        "campus_baseline_v1_L0p9_T0p4--LLF--d682ef2145",
+        "campus_baseline_v1_L0p9_T0p4--LLF--ed88324788",
+        "campus_baseline_v1_L0p9_T0p55--EDF--05258f7f9b",
+        "campus_baseline_v1_L0p9_T0p55--EDF--f298c7d62b",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--470702d744",
+        "campus_baseline_v1_L0p9_T0p55--FCFS--bcb4e25b15",
+        "campus_baseline_v1_L0p9_T0p55--LLF--0e5837f15e",
+        "campus_baseline_v1_L0p9_T0p55--LLF--6935c14a9a",
+        "campus_baseline_v1_L0p9_T0p7--EDF--4a8a88530f",
+        "campus_baseline_v1_L0p9_T0p7--EDF--d8bc05d85e",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--0da78690f2",
+        "campus_baseline_v1_L0p9_T0p7--FCFS--2378d51205",
+        "campus_baseline_v1_L0p9_T0p7--LLF--5352ea4c74",
+        "campus_baseline_v1_L0p9_T0p7--LLF--cf40aa4bb4",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7647220f67",
+        "campus_baseline_v1_L0p9_T0p85--EDF--7a830e448a",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--9e654e399e",
+        "campus_baseline_v1_L0p9_T0p85--FCFS--d7ec116ccc",
+        "campus_baseline_v1_L0p9_T0p85--LLF--380a35217b",
+        "campus_baseline_v1_L0p9_T0p85--LLF--e8bd22612b",
+        "campus_baseline_v1_L1p1_T0p4--EDF--1ce1b5e5c3",
+        "campus_baseline_v1_L1p1_T0p4--EDF--e60436cff0",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--98eef770bd",
+        "campus_baseline_v1_L1p1_T0p4--FCFS--bf89379598",
+        "campus_baseline_v1_L1p1_T0p4--LLF--339692e2e1",
+        "campus_baseline_v1_L1p1_T0p4--LLF--3a55777840",
+        "campus_baseline_v1_L1p1_T0p55--EDF--77bfd92b5e",
+        "campus_baseline_v1_L1p1_T0p55--EDF--8bd29893d1",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6ad1d375a6",
+        "campus_baseline_v1_L1p1_T0p55--FCFS--6bc30b78ab",
+        "campus_baseline_v1_L1p1_T0p55--LLF--2f64003fa9",
+        "campus_baseline_v1_L1p1_T0p55--LLF--86bebab597",
+        "campus_baseline_v1_L1p1_T0p7--EDF--3f731e9db5",
+        "campus_baseline_v1_L1p1_T0p7--EDF--e8f77682c7",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--d7ce607f12",
+        "campus_baseline_v1_L1p1_T0p7--FCFS--f9d8ee1074",
+        "campus_baseline_v1_L1p1_T0p7--LLF--8d77879ec0",
+        "campus_baseline_v1_L1p1_T0p7--LLF--b353dad9cb",
+        "campus_baseline_v1_L1p1_T0p85--EDF--44c6b4b547",
+        "campus_baseline_v1_L1p1_T0p85--EDF--e6683269de",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--5face0d55c",
+        "campus_baseline_v1_L1p1_T0p85--FCFS--8d7d00f0f6",
+        "campus_baseline_v1_L1p1_T0p85--LLF--5ab71f04d2",
+        "campus_baseline_v1_L1p1_T0p85--LLF--694f9bed06",
+        "campus_baseline_v1_L1p3_T0p4--EDF--27dd283f8f",
+        "campus_baseline_v1_L1p3_T0p4--EDF--a896108c04",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--1a255220d6",
+        "campus_baseline_v1_L1p3_T0p4--FCFS--72d7343bd3",
+        "campus_baseline_v1_L1p3_T0p4--LLF--620237836b",
+        "campus_baseline_v1_L1p3_T0p4--LLF--dd4e58f55c",
+        "campus_baseline_v1_L1p3_T0p55--EDF--16fefd8ec7",
+        "campus_baseline_v1_L1p3_T0p55--EDF--3036fb4750",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--4966470106",
+        "campus_baseline_v1_L1p3_T0p55--FCFS--e45f1d82e1",
+        "campus_baseline_v1_L1p3_T0p55--LLF--880e0ad5f8",
+        "campus_baseline_v1_L1p3_T0p55--LLF--e60d1774d9",
+        "campus_baseline_v1_L1p3_T0p7--EDF--7a21293448",
+        "campus_baseline_v1_L1p3_T0p7--EDF--e449e372f6",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--4da4060d42",
+        "campus_baseline_v1_L1p3_T0p7--FCFS--e31e69ea28",
+        "campus_baseline_v1_L1p3_T0p7--LLF--39536d1a39",
+        "campus_baseline_v1_L1p3_T0p7--LLF--fbd18308a1",
+        "campus_baseline_v1_L1p3_T0p85--EDF--2d6ba0d9f5",
+        "campus_baseline_v1_L1p3_T0p85--EDF--8b57c83511",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--4eb325a63a",
+        "campus_baseline_v1_L1p3_T0p85--FCFS--d8093e8478",
+        "campus_baseline_v1_L1p3_T0p85--LLF--3be9f99d8d",
+        "campus_baseline_v1_L1p3_T0p85--LLF--f87d8897e6"
+      ]
+    }
+  }
+}
